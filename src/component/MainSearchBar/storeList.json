@@ -1,0 +1,50 @@
+[
+  {
+    "storeInfo": {
+      "id": 1,
+      "name": "하울즈",
+      "address": "경기 수원시 영통구 매영로415번길 52 1층",
+      "postId": 1
+    }
+  },
+  {
+    "storeInfo": {
+      "id": 2,
+      "name": "소공원",
+      "address": "경기 수원시 영통구 덕영대로1673번길 34 1층",
+      "postId": 2
+    }
+  },
+  {
+    "storeInfo": {
+      "id": 3,
+      "name": "카페드리옹 용인수지점",
+      "address": "경기 용인시 수지구 신수로683번길 22 1층, 2층",
+      "postId": 3
+    }
+  },
+  {
+    "storeInfo": {
+      "id": 4,
+      "name": "위베이브베이크샵",
+      "address": "서울 관악구 남부순환로233길 16 2층",
+      "postId": 4
+    }
+  },
+  {
+    "storeInfo": {
+      "id": 5,
+      "name": "한과와락",
+      "address": "서울 강남구 봉은사로4길 31-5",
+      "postId": 5
+    }
+  },
+  {
+    "storeInfo": {
+      "id": 6,
+      "name": "카페 운트",
+      "address": "경기 수원시 영통구 반달로7번길 6 104호",
+      "postId": 6
+    }
+  }
+]

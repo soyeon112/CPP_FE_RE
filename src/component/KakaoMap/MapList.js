@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './MapList.css';
-import SearchBar from '../Main/SearchBar';
+import SearchBar from '../MainSearchBar/SearchBar';
 import { CustomOverlayMap, Map, MapMarker } from 'react-kakao-maps-sdk';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
