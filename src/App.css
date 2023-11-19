@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "PreB";
+  src: url(../src/assets/fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "PreR";
+  src: url(../src/assets/fonts/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "PreL";
+  src: url(../src/assets/fonts/Pretendard-Light.woff) format("woff");
+}
