@@ -3,11 +3,19 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import PostForm from './PostForm';
-
+import dummyData from './DummyReco.json';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import styled from 'styled-components';
 
 //component - 메인 오늘의 추천 카페 영역
+
+const RecommendItemWrap = styled.div`
+  width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
 function RecoPost() {
   var settings = {
     dots: true,
@@ -53,22 +61,27 @@ function RecoPost() {
     profileURL: null,
     photoURL: null,
   };
-  const [recoPost, seRecoPost] = useState(initOtherPost);
+  const [recoPost, setRecoPost] = useState(initOtherPost);
 
+  console.log(recoPost);
+  useEffect(() => {
+    setRecoPost(dummyData);
+  }, []);
+  /* 11.19 주석처리
   const getRecoPost = async () => {
     const res = await axios.get('http://api.cpp.co.kr:3300/posts/most-likes');
-    seRecoPost(res.data);
+    setRecoPost(res.data);
   };
 
   useEffect(() => {
     getRecoPost();
     console.log('메인 추천포스트 : ', recoPost);
   }, []);
-
+*/
   // 슬라이더 참고: https://velog.io/@mokyoungg/CodeReview-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC
 
   return (
-    <div className="sliderPlace">
+    <RecommendItemWrap>
       {recoPost.cafeId !== null ? (
         <Slider {...settings}>
           {Object.values(recoPost).map((it) => (
@@ -82,7 +95,7 @@ function RecoPost() {
           ))}
         </Slider>
       ) : null}
-    </div>
+    </RecommendItemWrap>
   );
 }
 

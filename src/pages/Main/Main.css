@@ -128,8 +128,8 @@
 }
 .reco_Btn {
   position: absolute;
-  left: 285px;
-  top: 1200px;
+  left: 0;
+  top: 0;
   width: 950px;
   display: flex;
   justify-content: space-between;
@@ -307,4 +307,4 @@
     margin-right: auto;
     margin-left: 20px;
   }
-} ;
+}

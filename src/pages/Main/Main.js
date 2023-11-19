@@ -1,6 +1,5 @@
 import Reacet from 'react';
 import { Link } from 'react-router-dom';
-import './Main.css';
 import SearchBar from '../../component/Main/SearchBar';
 import RecoPost from '../../component/Main/RecoPost';
 import styled from 'styled-components';
@@ -8,9 +7,26 @@ import styled from 'styled-components';
 //page - 메인
 
 const MainWrap = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: lavender;
+  /* width: 990px; */
+  height: 100%;
+  margin: 0 auto;
+`;
+
+const BannerWrap = styled.div`
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+`;
+
+const MapButton = styled.button`
+  width: 200px;
+  height: 55px;
+  margin: 20px auto;
+  background-color: #fc5230;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
 `;
 function Main() {
   return (
@@ -18,39 +34,50 @@ function Main() {
       <SearchBar
         placeholder={'지역 / 공간 이름을 입력해주세요.'} /*data = {Store}*/
       />
-      <div className="mainBanner">
-        {/* <img
-          src={`${process.env.PUBLIC_URL}/image/banner1-ver2.png`}
-          width="100%"
-        /> */}
+      <BannerWrap className="mainBanner">
         <img
-          // src={`${process.env.PUBLIC_URL}/image/banner2-ver2-1.png`}
           src={`${process.env.PUBLIC_URL}/image/cpp-banner2.png`}
           width="1200px"
         />
         <Link to="/map">
-          <img
+          {/* <img
             className="mainBannerBtn"
             src={`${process.env.PUBLIC_URL}/image/main-banner-btn.png`}
-          />
+          /> */}
+          <MapButton>내 주변 카페 찾아보기</MapButton>
         </Link>
-      </div>
-      <div className="recommendPost">
-        <div className="recoText">
-          <p>TODAY C:P:P PICK♥</p>
-        </div>
-
-        <RecoPost />
-        {/*  
-          ------------left, right slider btn---------------- < >
-          <div className='reco_Btn'>  
-            <img src={`${process.env.PUBLIC_URL}/image/left-icon.png`}/>
-            <img src={`${process.env.PUBLIC_URL}/image/right-icon.png`}/>
-          </div> 
-          */}
-      </div>
+      </BannerWrap>
+      <RecommendWrap>
+        <RecommendInner>
+          <InnerTitle>TODAY C:P:P PICK ♥</InnerTitle>
+          <RecommendDiv>
+            <RecoPost />
+          </RecommendDiv>
+        </RecommendInner>
+      </RecommendWrap>
     </MainWrap>
   );
 }
+const RecommendWrap = styled.div`
+  width: 990px;
+  height: 430px;
+  margin: 80px auto 0 auto;
+`;
 
+const RecommendInner = styled.div`
+  padding-top: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+`;
+const RecommendDiv = styled(RecommendInner)`
+  margin: 20px 0;
+  height: 90%;
+`;
+
+const InnerTitle = styled.p`
+  font-family: 'PreB';
+  font-size: 1.2rem;
+  color: #fc5230;
+`;
 export default Main;

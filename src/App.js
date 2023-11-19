@@ -20,12 +20,10 @@ const AllFont = styled.div`
   font-family: 'PreR';
 `;
 const VisibleArea = styled.div`
-  height: 100vh;
-  /* overflow: hidden; */
-  /* padding-bottom: 100px; */
-
-  /* width: 100%; */
-  background-color: beige;
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 85px;
+  /* background-color: pink; */
 `;
 function App() {
   return (
@@ -46,8 +44,8 @@ function App() {
             <Route path="/posting" element={<Posting />} />
             <Route path="/map" element={<MapList />} />
           </Routes>
-          {/* <Footer /> */}
         </VisibleArea>
+        {/* <Footer /> */}
       </AllFont>
     </BrowserRouter>
   );

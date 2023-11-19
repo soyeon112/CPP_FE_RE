@@ -23,7 +23,7 @@
     "react-scripts": "^5.0.1",
     "react-scroll-box": "^0.3.5",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
+    "slick-carousel": "github:soyeon112/slick_fork",
     "styled-components": "^6.1.1",
     "styled-reset": "^4.5.1",
     "web-vitals": "^2.1.4"
