@@ -30,6 +30,13 @@ export const MapButton = styled.button`
   color: #fff;
   font-size: 1rem;
   border: none;
+  transition: all 0.5s;
+  font-family: 'PreB';
+
+  &:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em lightgray;
+    transform: translateY(-5px);
+  }
 `;
 
 export const RecommendWrap = styled.div`

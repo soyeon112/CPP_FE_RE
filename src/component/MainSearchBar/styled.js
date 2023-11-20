@@ -29,7 +29,8 @@ export const SearchBtn = styled.img`
 
 export const ResultWrap = styled.div`
   position: absolute;
-  display: flex;
+  display: ${(props) => (props.$showResult ? 'flex' : 'none')};
+  /* display: flex; */
   flex-direction: row;
   justify-content: space-between;
   width: 800px;

@@ -101,9 +101,10 @@ function Posting({ location, history }) {
       // });
       console.log('State content : ', allState.content);
       console.log('텍스트 있음');
+
       try {
         const response = await axios.post(
-          'http://api.cpp.co.kr:3300/posts',
+          // 'http://api.cpp.co.kr:3300/posts',
           {
             ...allState,
             content: contentText,

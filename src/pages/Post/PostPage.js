@@ -49,9 +49,9 @@ function PostPage() {
 
   // 포스트 정보 가져오기 axios
   const getdata = async () => {
-    const res = await axios.get(`http://api.cpp.co.kr:3300/posts/${params.id}`);
+    // const res = await axios.get(`http://api.cpp.co.kr:3300/posts/${params.id}`);
     console.log(params.id);
-    setPostData(res.data);
+    // setPostData(res.data);
     console.log('getdata');
   };
 

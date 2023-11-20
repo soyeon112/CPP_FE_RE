@@ -17,7 +17,7 @@ import {
 
 //component - 메인 상단 검색창
 
-function SearchBar({ placeholder, data }) {
+function SearchBar({ placeholder }) {
   const [search, setSearch] = useState('');
   const [showResult, setShowResult] = useState(false);
   const changeText = (e) => {
@@ -70,8 +70,6 @@ function SearchBar({ placeholder, data }) {
     setGetSearch(DummyData);
   }, []);
 
-  console.log('search dummy', getSearch);
-
   // const onEnter = (e) => {
   //   if (e.key === 'Enter') {
   //     GetSearch(); //엔터 클릭하면 axios실행
@@ -100,7 +98,7 @@ function SearchBar({ placeholder, data }) {
 
       {/* 검색창 클릭시 검색결과 리스트 출력 */}
       {showResult ? (
-        <ResultWrap>
+        <ResultWrap $showResult onMouseLeave={() => setShowResult(false)}>
           <ResultInner>
             <ResultTitle>카페별</ResultTitle>
             <ResultList>
