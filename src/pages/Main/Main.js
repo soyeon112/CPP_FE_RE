@@ -1,7 +1,7 @@
 import Reacet from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../../component/MainSearchBar/SearchBar';
-import RecoPost from '../../component/Main/RecoPost';
+import RecoPost from '../../component/MainRecommend/RecoPost';
 import {
   MainWrap,
   BannerWrap,

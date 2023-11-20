@@ -10,3 +10,16 @@
   font-family: "PreL";
   src: url(../src/assets/fonts/Pretendard-Light.woff) format("woff");
 }
+
+@font-face {
+  font-family: "SuiteB";
+  src: url(../src/assets/fonts/SUITE-Bold.woff2) format("woff2");
+}
+@font-face {
+  font-family: "SuiteR";
+  src: url(../src/assets/fonts/SUITE-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "SuiteL";
+  src: url(../src/assets/fonts/SUITE-Light.woff2) format("woff2");
+}

@@ -15,6 +15,7 @@ import {
   ResultAddr,
 } from './styled';
 
+import { LinkStyle } from '../../CommonStyled';
 //component - 메인 상단 검색창
 
 function SearchBar({ placeholder }) {
@@ -105,12 +106,12 @@ function SearchBar({ placeholder }) {
               {getSearch
                 .filter((info) => info.storeInfo.name.includes(search))
                 .map((info, key) => (
-                  <Link to={`/post/${info.storeInfo.postId}`}>
+                  <LinkStyle to={`/post/${info.storeInfo.postId}`}>
                     <ResultListItem key={info.storeInfo.id}>
                       {info.storeInfo.name}
                       <ResultAddr>{info.storeInfo.address}</ResultAddr>
                     </ResultListItem>
-                  </Link>
+                  </LinkStyle>
                 ))}
             </ResultList>
           </ResultInner>
@@ -121,12 +122,12 @@ function SearchBar({ placeholder }) {
               {getSearch
                 .filter((info) => info.storeInfo.address.includes(search))
                 .map((info, key) => (
-                  <Link to={`/post/${info.storeInfo.postId}`}>
+                  <LinkStyle to={`/post/${info.storeInfo.postId}`}>
                     <ResultListItem key={info.storeInfo.id}>
                       {info.storeInfo.name}
                       <ResultAddr>{info.storeInfo.address}</ResultAddr>
                     </ResultListItem>
-                  </Link>
+                  </LinkStyle>
                 ))}
             </ResultList>
           </ResultInner>

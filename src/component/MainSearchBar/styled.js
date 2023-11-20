@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { mainColor } from '../../CommonStyled';
 
 export const SearchBarWrap = styled.div`
   position: relative;
@@ -16,7 +18,7 @@ export const SearchBarItem = styled.input`
   padding: 20px;
   box-sizing: border-box;
   font-size: 1rem;
-  font-family: 'PreB';
+  outline-color: ${mainColor};
 `;
 
 export const SearchBtn = styled.img`
@@ -51,7 +53,7 @@ export const ResultInner = styled.div`
 export const ResultTitle = styled.p`
   font-size: 1rem;
   font-family: 'PreB';
-  color: #fc5230;
+  color: ${mainColor};
   padding-bottom: 10px;
   border-bottom: 2px solid #eaeaea;
 `;
@@ -67,10 +69,11 @@ export const ResultListItem = styled.li`
   padding: 10px 0;
   box-sizing: border-box;
   border-bottom: 1px solid #eaeaea;
+  list-style: none;
 
   /* background-color: pink; */
   &:hover {
-    color: #fc5230;
+    color: ${mainColor};
     font-family: 'PreB';
   }
 `;
@@ -78,6 +81,6 @@ export const ResultListItem = styled.li`
 export const ResultAddr = styled.div`
   margin-left: 10px;
   color: gray;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   line-height: 0.9rem;
 `;

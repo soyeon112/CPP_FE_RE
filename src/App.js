@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import { Reset } from 'styled-reset';
-import './App.css';
+import './FontStyle.css';
 import Header from './component/Header/Header';
 import Footer from './component/Footer/Footer';
 import Join from './pages/Join/Join';
@@ -45,7 +45,7 @@ function App() {
             <Route path="/map" element={<MapList />} />
           </Routes>
         </VisibleArea>
-        {/* <Footer /> */}
+        <Footer />
       </AllFont>
     </BrowserRouter>
   );

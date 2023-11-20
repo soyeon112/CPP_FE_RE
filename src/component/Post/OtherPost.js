@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import PostForm from '../Main/PostForm';
+import PostForm from '../MainRecommend/PostForm';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
