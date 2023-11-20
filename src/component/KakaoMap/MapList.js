@@ -29,9 +29,10 @@ const MapList = () => {
     console.log(currentMapInfo.swLatLng.lat);
 
     // axios 요청
-    const res = await axios.get(
-      `http://api.cpp.co.kr:3300/cafes/map?swLat=${currentMapInfo.swLatLng.lat}&swLng=${currentMapInfo.swLatLng.lng}&neLat=${currentMapInfo.neLatLng.lat}&neLng=${currentMapInfo.neLatLng.lng}`
-    );
+    const res = await axios
+      .get
+      // `http://api.cpp.co.kr:3300/cafes/map?swLat=${currentMapInfo.swLatLng.lat}&swLng=${currentMapInfo.swLatLng.lng}&neLat=${currentMapInfo.neLatLng.lat}&neLng=${currentMapInfo.neLatLng.lng}`
+      ();
 
     setCafesInCurMap(res.data);
     console.log(cafesInCurMap);

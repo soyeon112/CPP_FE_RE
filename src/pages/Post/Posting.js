@@ -69,9 +69,10 @@ function Posting({ location, history }) {
   //검색창 데이터 get
   const GetCafeData = async () => {
     console.log('들어옴?');
-    const res = await axios.get(
-      `http://api.cpp.co.kr:3300/cafes/search?keyword=${keyword}`
-    );
+    const res = await axios
+      .get
+      // `http://api.cpp.co.kr:3300/cafes/search?keyword=${keyword}`
+      ();
     setCafeInfo(res.data);
     console.log('cafeInfo', cafeInfo);
   };

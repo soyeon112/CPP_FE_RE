@@ -26,7 +26,7 @@ function ProfileModify() {
     console.log('con1', modiState.nickName);
     axios({
       method: 'PATCH',
-      url: 'http://api.cpp.co.kr:3300/users/8',
+      // url: 'http://api.cpp.co.kr:3300/users/8',
       data: {
         nickname: modiState.nickName,
       },
@@ -41,7 +41,7 @@ function ProfileModify() {
     console.log(modiState);
     axios({
       method: 'PATCH',
-      url: 'http://api.cpp.co.kr:3300/users/8',
+      // url: 'http://api.cpp.co.kr:3300/users/8',
       data: {
         password: modiState.newPW,
       },

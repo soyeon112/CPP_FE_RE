@@ -45,7 +45,7 @@ function Mypage() {
   useEffect(() => {
     axios({
       method: 'get',
-      url: `http://api.cpp.co.kr:3300/users/${userID}`,
+      // url: `http://api.cpp.co.kr:3300/users/${userID}`,
       data: {
         id: userID,
       },
@@ -65,9 +65,10 @@ function Mypage() {
   const [getPickList, setGetPickList] = useState(initDataPick);
   //회원 게시물 리스트
   const PostListGET = async () => {
-    const res = await axios.get(
-      `http://api.cpp.co.kr:3300/users/${userID}/posts`
-    );
+    const res = await axios
+      .get
+      // `http://api.cpp.co.kr:3300/users/${userID}/posts`
+      ();
     setGetPostList(res.data);
     console.log(getPostList);
     console.log(res);
@@ -80,9 +81,10 @@ function Mypage() {
 
   //저장한 게시물 리스트
   const PickListGET = async () => {
-    const res = await axios.get(
-      `http://api.cpp.co.kr:3300/users/${userID}/stored-posts`
-    );
+    const res = await axios
+      .get
+      // `http://api.cpp.co.kr:3300/users/${userID}/stored-posts`
+      ();
     setGetPickList(res.data);
     console.log(getPickList);
   };

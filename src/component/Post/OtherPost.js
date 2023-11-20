@@ -55,6 +55,7 @@ function OtherPost() {
   };
   const [otherPost, setOtherPost] = useState(initOtherPost);
 
+  /* 11/20 주석처리
   const getOtherPost = async () => {
     const res = await axios.get('http://api.cpp.co.kr:3300/posts?cafeId=3');
     setOtherPost(res.data);
@@ -65,6 +66,7 @@ function OtherPost() {
     getOtherPost();
     console.log('다른유저게시물 : ', otherPost);
   }, []);
+*/
 
   // 슬라이더 참고: https://velog.io/@mokyoungg/CodeReview-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC
 

@@ -12,7 +12,7 @@ function UserDrop() {
 
     axios({
       method: 'DELETE',
-      url: 'http://api.cpp.co.kr:3300/users/2',
+      // url: 'http://api.cpp.co.kr:3300/users/2',
       data: {
         password: dropPW,
       },

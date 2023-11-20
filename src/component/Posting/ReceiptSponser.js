@@ -38,7 +38,7 @@ function ReceiptSponser({ setAllState, allState }) {
 
     await axios({
       method: 'POST',
-      url: 'http://api.cpp.co.kr:3300/posts/photo',
+      // url: 'http://api.cpp.co.kr:3300/posts/photo',
       data: receiptFormData,
       headers: {
         'Content-Type': 'multipart/form-data',

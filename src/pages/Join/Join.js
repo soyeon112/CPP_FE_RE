@@ -38,7 +38,7 @@ function Join() {
     try {
       const res = await axios({
         method: 'post',
-        url: 'http://api.cpp.co.kr:3300/users',
+        // url: 'http://api.cpp.co.kr:3300/users',
         data: {
           nickname: joinInit.registerNickname,
           email: joinInit.registerEmail,
@@ -82,7 +82,7 @@ function Join() {
     try {
       const res = await axios({
         method: 'get',
-        url: `http://api.cpp.co.kr:3300/users/nickname?nickname=${joinInit.registerNickname}`,
+        // url: `http://api.cpp.co.kr:3300/users/nickname?nickname=${joinInit.registerNickname}`,
         withCredentials: true,
       });
       if (res.status === 200) {
@@ -125,7 +125,7 @@ function Join() {
     try {
       const res = await axios({
         method: 'get',
-        url: `http://api.cpp.co.kr:3300/users/email?email=${joinInit.registerEmail}`,
+        // url: `http://api.cpp.co.kr:3300/users/email?email=${joinInit.registerEmail}`,
         withCredentials: true,
       });
       console.log(res);

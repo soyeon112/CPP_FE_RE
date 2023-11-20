@@ -10,7 +10,7 @@ function LoginModal({ closeLoginModal }) {
   const loginBtn = () => {
     axios({
       method: 'post',
-      url: 'http://api.cpp.co.kr:3300/auth/login',
+      // url: 'http://api.cpp.co.kr:3300/auth/login',
       data: {
         email: loginEmail,
         password: loginPassword,

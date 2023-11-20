@@ -9,7 +9,7 @@ function Header() {
   const [isLogin, setIsLogin] = useState(false);
   const logoutHeader = () => {
     axios
-      .get('http://api.cpp.co.kr:3300/auth/logout')
+      // .get('http://api.cpp.co.kr:3300/auth/logout')
       .then((res) => {
         console.log(res, '======로그아웃 성공======');
         setIsLogin(false);
