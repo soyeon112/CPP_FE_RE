@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
-import './LoginModal.css';
-import axios from 'axios';
-
+import {
+  ModalBg,
+  ModalInner,
+  InnerTop,
+  InnerMiddle,
+  InnerBottom,
+  InputFormWrap,
+  Button,
+  JoinBtn,
+} from './styled';
 import { useDispatch } from 'react-redux';
 import { authAction } from '../../Store/auth';
 
@@ -52,55 +59,50 @@ function LoginModal({ closeLoginModal }) {
   };
 
   return (
-    <div className="LoginPlace">
-      <div className="ModalBackground">
-        <div className="LoginContainer">
-          <button onClick={() => closeLoginModal(false)}>
-            <img
-              className="closeBtn"
-              src={`${process.env.PUBLIC_URL}/image/close_icon.png`}
-              width="20px"
-              height="20px"
-              alt=""
-            ></img>
-          </button>
-          <div className="LoginTitle">
-            <h1>로그인</h1>
-            <div className="LoginBody">
-              <div className="loginEmailForm">
-                <p id="loginEmail">이메일</p>
-                <input
-                  className="loginInput"
-                  placeholder="이메일"
-                  type="email"
-                  value={loginEmail}
-                  onChange={(e) => setLoginEmail(e.target.value)}
-                />
-              </div>
-              <div className="loginPWForm">
-                <p id="loginPassword">비밀번호</p>
-                <input
-                  className="loginInput"
-                  placeholder="비밀번호"
-                  type="password"
-                  value={loginPassword}
-                  onChange={(e) => setLoginPassword(e.target.value)}
-                />
-              </div>
-              <div className="LoginFooter">
-                <button id="loginButton" onClick={LoginHandler}>
-                  로그인하기
-                </button>
-                <p>아직 회원이 아니신가요?</p>
-                <button id="joinButton" onClick={openJoin}>
-                  회원가입 하러가기
-                </button>
-              </div>
+    <>
+      <ModalBg>
+        <ModalInner>
+          <InnerTop>
+            <div>
+              <img
+                id="modalCloseBtn"
+                onClick={() => closeLoginModal(false)}
+                src={`${process.env.PUBLIC_URL}/image/close_icon.png`}
+                width="20px"
+                height="20px"
+                alt="닫기버튼"
+              />
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <p id="title">로그인</p>
+          </InnerTop>
+          <InnerMiddle>
+            <InputFormWrap>
+              <p>이메일</p>
+              <input
+                placeholder="id"
+                type="email"
+                value={loginEmail}
+                onChange={(e) => setLoginEmail(e.target.value)}
+              />
+            </InputFormWrap>
+            <InputFormWrap>
+              <p>비밀번호</p>
+              <input
+                placeholder="pw"
+                type="password"
+                value={loginPassword}
+                onChange={(e) => setLoginPassword(e.target.value)}
+              />
+            </InputFormWrap>
+            <Button onClick={LoginHandler}>로그인하기</Button>
+          </InnerMiddle>
+          <InnerBottom>
+            <p>아직 회원이 아니신가요?</p>
+            <JoinBtn onClick={openJoin}>회원가입</JoinBtn>
+          </InnerBottom>
+        </ModalInner>
+      </ModalBg>
+    </>
   );
 }
 

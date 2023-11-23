@@ -5,7 +5,7 @@
   width: 600px;
   margin: 30px auto 0 auto;
 }
-button {
+/* button {
   border: solid #aaaaaa;
   border-width: 1px;
   border-radius: 10px;
@@ -15,7 +15,7 @@ button {
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: 450;
-}
+} */
 
 .ModiprofileImg {
   width: 180px;
