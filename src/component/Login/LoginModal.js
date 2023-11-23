@@ -2,39 +2,48 @@ import React, { useState } from 'react';
 import './LoginModal.css';
 import axios from 'axios';
 
+import { useDispatch } from 'react-redux';
+import { authAction } from '../../Store/auth';
+
 function LoginModal({ closeLoginModal }) {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
 
-  //login axios
-  const loginBtn = () => {
-    axios({
-      method: 'post',
-      // url: 'http://api.cpp.co.kr:3300/auth/login',
-      data: {
-        email: loginEmail,
-        password: loginPassword,
-      },
-      withCredentials: true,
-    })
-      .then((res) => {
-        console.log(res);
-        console.log(res.status);
-        if (res.status === 200) {
-          console.log('로그인 성공');
-          sessionStorage.setItem('id', res.data.id);
-          sessionStorage.setItem('nickname', res.data.nickname);
-          sessionStorage.setItem('profileURL', res.data.profileURL);
-          console.log(res.data.id);
-          closeLoginModal(false);
-          window.location.reload();
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        alert('ERROR : 입력하신 정보를 다시 확인해주세요!!');
-      });
+  const dispatch = useDispatch();
+
+  const LoginHandler = () => {
+    dispatch(authAction.login());
   };
+
+  //login axios
+  // const loginBtn = () => {
+  //   axios({
+  //     method: 'post',
+  //     // url: 'http://api.cpp.co.kr:3300/auth/login',
+  //     data: {
+  //       email: loginEmail,
+  //       password: loginPassword,
+  //     },
+  //     withCredentials: true,
+  //   })
+  //     .then((res) => {
+  //       console.log(res);
+  //       console.log(res.status);
+  //       if (res.status === 200) {
+  //         console.log('로그인 성공');
+  //         sessionStorage.setItem('id', res.data.id);
+  //         sessionStorage.setItem('nickname', res.data.nickname);
+  //         sessionStorage.setItem('profileURL', res.data.profileURL);
+  //         console.log(res.data.id);
+  //         closeLoginModal(false);
+  //         window.location.reload();
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       alert('ERROR : 입력하신 정보를 다시 확인해주세요!!');
+  //     });
+  // };
 
   //회원가입페이지 open
   const openJoin = () => {
@@ -79,7 +88,7 @@ function LoginModal({ closeLoginModal }) {
                 />
               </div>
               <div className="LoginFooter">
-                <button id="loginButton" onClick={loginBtn}>
+                <button id="loginButton" onClick={LoginHandler}>
                   로그인하기
                 </button>
                 <p>아직 회원이 아니신가요?</p>

@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import { Reset } from 'styled-reset';
+
 import './FontStyle.css';
 import Header from './component/Header/Header';
 import Footer from './component/Footer/Footer';

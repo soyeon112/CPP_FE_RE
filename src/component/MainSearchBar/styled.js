@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { mainColor } from '../../CommonStyled';
 
 export const SearchBarWrap = styled.div`
   position: relative;
-  width: 800px;
+  width: 50%; // 800px
   height: 50px;
-  margin: 10px auto 0 auto;
+  margin: 0 auto 20px auto;
 `;
 
 export const SearchBarItem = styled.input`
