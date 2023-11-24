@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { HeaderNav, LinkHover } from './styled';
 import LoginModal from '../LoginModal/LoginModal';
 
+//로그인 전에 보이는 nav
 function Nav() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
   return (

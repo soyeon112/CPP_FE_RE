@@ -1,4 +1,4 @@
-import Reacet from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../../component/MainSearchBar/SearchBar';
 import RecoPost from '../../component/MainRecommend/RecoPost';
@@ -19,10 +19,7 @@ function Main() {
     <MainWrap>
       <SearchBar placeholder={'지역 / 공간 이름을 입력해주세요.'} />
       <BannerWrap>
-        <img
-          src={`${process.env.PUBLIC_URL}/image/cpp-banner2.png`}
-          width="1200px"
-        />
+        <img src={`${process.env.PUBLIC_URL}/image/cpp-banner2.png`} />
         <Link to="/map">
           <MapButton>내 주변 카페 찾아보기</MapButton>
         </Link>

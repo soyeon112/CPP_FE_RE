@@ -10,17 +10,15 @@ export const LinkHover = styled(LinkStyle)`
 
 export const HeaderNav = styled.div`
   position: absolute;
-  /* top: 55px;
-  right: 30px; */
   top: 0;
   right: 0;
   width: 20%;
-  /* background-color: pink; */
 
   #navUl {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin-right: 20px;
   }
 
   .navLi {

@@ -12,8 +12,17 @@ import styled from 'styled-components';
 
 const RecommendItemWrap = styled.div`
   width: 850px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%;
+  margin: 0 auto;
+  /* background-color: green; */
+
+  @media (max-width: 1280px) {
+    width: 100%;
+  }
+  @media (max-width: 820px) {
+  }
+  @media (max-width: 500px) {
+  }
 `;
 
 function RecoPost() {

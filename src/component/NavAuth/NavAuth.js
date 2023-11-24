@@ -6,6 +6,7 @@ import { authAction } from '../../store/auth';
 
 import { HeaderNav, LinkHover } from './styled';
 
+//로그인 후에 보이는 nav
 function Nav() {
   const dispatch = useDispatch();
 
