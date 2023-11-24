@@ -15,15 +15,13 @@ export const ModalBg = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
 `;
 export const ModalInner = styled.div`
-  /* position: relative; */
-
   width: 560px;
   height: 468px;
   background: #fcfcfc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 64px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  /* margin: 240px auto 0 auto; */
+
   margin: 150px auto 0 auto;
   display: flex;
   flex-direction: column;
@@ -36,12 +34,12 @@ export const ModalInner = styled.div`
   }
   @media (max-width: 500px) {
     width: 85%;
+    height: auto;
   }
 `;
 export const InnerTop = styled.div`
   width: 100%;
   height: 70px;
-  /* background-color: lavender; */
   position: relative;
 
   #modalCloseBtn {
@@ -64,9 +62,10 @@ export const InnerTop = styled.div`
 export const InnerMiddle = styled.div`
   width: 100%;
   height: 60%;
-  padding: 50px 0;
+  padding: 30px 0;
   box-sizing: border-box;
   text-align: center;
+
   @media (max-width: 500px) {
     height: 60%;
     padding: 25px 0;
@@ -84,13 +83,13 @@ export const InputFormWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 20px auto 0 auto;
+  margin: 25px auto 0 auto;
 
   @media (max-width: 500px) {
     flex-direction: column;
-    margin: 0 auto;
-    width: 90%;
-    height: auto;
+    margin: 10px auto;
+    width: 70%;
+    height: 80px;
     text-align: center;
   }
 

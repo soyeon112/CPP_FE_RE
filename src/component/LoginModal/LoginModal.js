@@ -10,7 +10,7 @@ import {
   JoinBtn,
 } from './styled';
 import { useDispatch } from 'react-redux';
-import { authAction } from '../../Store/auth';
+import { authAction } from '../../store/auth';
 
 function LoginModal({ closeLoginModal }) {
   const [loginEmail, setLoginEmail] = useState('');

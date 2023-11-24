@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { HeaderNav, LinkHover } from './styled';
-import LoginModal from '../Login/LoginModal';
+import LoginModal from '../LoginModal/LoginModal';
 
 function Nav() {
   const [openLoginModal, setOpenLoginModal] = useState(false);

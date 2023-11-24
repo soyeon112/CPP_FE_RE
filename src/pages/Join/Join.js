@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Join.css';
-import LoginModal from '../../component/Login/LoginModal';
+import LoginModal from '../../component/LoginModal/LoginModal';
 import Policy from '../../component/Join/Policy';
 
 //page - 회원가입

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
-import { authAction } from '../../Store/auth';
+import { authAction } from '../../store/auth';
 
 import { HeaderNav, LinkHover } from './styled';
 

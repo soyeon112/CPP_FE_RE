@@ -7,7 +7,7 @@ import Header from './component/Header/Header';
 import Footer from './component/Footer/Footer';
 import Join from './pages/Join/Join';
 import Policy from './component/Join/Policy';
-import Login from './component/Login/LoginModal';
+import Login from './component/LoginModal/LoginModal';
 import Main from './pages/Main/Main';
 import MapList from './component/KakaoMap/MapList';
 import Mypage from './pages/Mypage/Mypage';
