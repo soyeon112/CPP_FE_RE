@@ -11,7 +11,7 @@ export const MainWrap = styled.div`
 export const BannerWrap = styled.div`
   width: 100%;
   height: auto;
-  margin: 20 auto;
+  margin: 10px auto;
   overflow: hidden;
   z-index: 1;
   display: flex;
@@ -20,13 +20,13 @@ export const BannerWrap = styled.div`
   align-items: center;
   position: relative;
   background-color: #fff9f8;
-  margin: 0 auto;
   text-align: center;
 
   img {
     /* width: 1200px; */
-    width: 80%;
+    width: 70%;
     @media (max-width: 1280px) {
+      width: 80%;
     }
     @media (max-width: 820px) {
       width: 120%;

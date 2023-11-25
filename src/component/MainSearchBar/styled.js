@@ -5,7 +5,7 @@ export const SearchBarWrap = styled.div`
   position: relative;
   width: 50%; // 800px
   height: 50px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 10px auto;
   @media (max-width: 1280px) {
   }
   @media (max-width: 820px) {
@@ -77,7 +77,6 @@ export const ResultListItem = styled.li`
   border-bottom: 1px solid #eaeaea;
   list-style: none;
 
-  /* background-color: pink; */
   &:hover {
     color: ${mainColor};
     font-family: 'PreB';
