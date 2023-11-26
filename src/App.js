@@ -13,7 +13,7 @@ import MapList from './component/KakaoMap/MapList';
 import Mypage from './pages/Mypage/Mypage';
 import ProfileModify from './pages/Mypage/ProfileModify';
 import UserDrop from './pages/Mypage/UserDrop';
-import PostPage from './pages/Post/PostPage';
+import PostPage from './pages/Post/PostPage2';
 import Posting from './pages/Post/Posting';
 import OtherPost from './component/Post/OtherPost';
 

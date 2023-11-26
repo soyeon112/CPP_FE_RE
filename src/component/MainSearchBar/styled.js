@@ -6,6 +6,7 @@ export const SearchBarWrap = styled.div`
   width: 50%; // 800px
   height: 50px;
   margin: 0 auto 10px auto;
+
   @media (max-width: 1280px) {
   }
   @media (max-width: 820px) {
@@ -38,10 +39,9 @@ export const SearchBtn = styled.img`
 export const ResultWrap = styled.div`
   position: absolute;
   display: ${(props) => (props.$showResult ? 'flex' : 'none')};
-  /* display: flex; */
   flex-direction: row;
   justify-content: space-between;
-  width: 800px;
+  width: 100%; //80px
   padding: 10px 20px;
   box-sizing: border-box;
   margin: 5px auto 0 auto;
@@ -50,11 +50,26 @@ export const ResultWrap = styled.div`
   font-size: 0.9rem;
   border: solid rgb(210, 210, 210);
   z-index: 3;
+
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 820px) {
+    /* width: 95%; */
+  }
+  @media (max-width: 500px) {
+    height: auto;
+    flex-direction: column;
+  }
 `;
 export const ResultInner = styled.div`
   width: 50%;
   height: auto;
   margin: 5px;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    margin: 10px 0;
+  }
 `;
 export const ResultTitle = styled.p`
   font-size: 1rem;

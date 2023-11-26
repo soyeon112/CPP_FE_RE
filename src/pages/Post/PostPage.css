@@ -27,6 +27,7 @@
 .arrowBtn {
   cursor: pointer;
 }
+
 .UserInfo_photo {
   position: absolute;
   left: 90px;
@@ -107,7 +108,7 @@
   font-weight: 450;
   font-size: 0.9rem;
   text-align: left;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 .infoCloseBtn {
   cursor: pointer;
@@ -146,7 +147,7 @@
 .postCafeInfo_Icons {
   width: 160px;
   height: 30px;
-  margin-top: 2px;
+  /* margin-top: 2px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;

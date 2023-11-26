@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 //component - 다른 유저의 게시물 추천 영역
-function OtherPost() {
+export default function OtherPost() {
   var settings = {
     dots: true,
     infinite: false,
@@ -89,5 +89,3 @@ function OtherPost() {
     </div>
   );
 }
-
-export default OtherPost;

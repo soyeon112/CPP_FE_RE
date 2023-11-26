@@ -23,60 +23,14 @@ function SearchBar({ placeholder }) {
   const [showResult, setShowResult] = useState(false);
   const changeText = (e) => {
     setSearch(e.target.value);
-    // GetSearch();
   };
 
-  /* 11.19 주석처리
-  const initDataSearch = {
-    name: [
-      {
-        id: null,
-        name: null,
-        address: null,
-        postId: null,
-      },
-    ],
-    address: [
-      {
-        id: null,
-        name: null,
-        address: null,
-        postId: null,
-      },
-    ],
-  };
-*/
-  axios.defaults.withCredentials = true;
-  // const [getSearch, setGetSearch] = useState(initDataSearch);
-  //11.19 코드 변경
   const [getSearch, setGetSearch] = useState();
 
-  /* 11.19 주석처리
-  const GetSearch = async () => {
-    console.log('search : ', search);
-    const res = await axios.get(
-      `http://api.cpp.co.kr:3300/cafes/search?keyword=${search}`
-    );
-    setGetSearch(res.data);
-    console.log('getSearch1 : ', getSearch);
-  };
-
-  useEffect(() => {
-    GetSearch();
-  }, []);
-*/
-
-  //11.19 추가 더미데이터
   useEffect(() => {
     setGetSearch(DummyData);
   }, []);
 
-  // const onEnter = (e) => {
-  //   if (e.key === 'Enter') {
-  //     GetSearch(); //엔터 클릭하면 axios실행
-  //     console.log('enter click');
-  //   }
-  // };
   return (
     <SearchBarWrap>
       <SearchBarItem
@@ -90,7 +44,6 @@ function SearchBar({ placeholder }) {
           }
         }}
         onChange={changeText}
-        // onKeyPress={onEnter} //enter key
       />
       <SearchBtn
         src={`${process.env.PUBLIC_URL}/image/search-icon.png`}
