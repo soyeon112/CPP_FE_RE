@@ -25,17 +25,24 @@ export default function PostTexts({ content, visited }) {
     return comment; // 그렇지않으면 (짧은 글에는) 쓴글 그대로 리턴!
   }, [isShowMore]);
 
+  const inShowMoreText = () => {
+    setIsShowMore(!isShowMore);
+  };
   return (
     <MainTextWrap>
       <div>{commenter}</div>
       {/* 본문 > 더보기 / 닫기 버튼 */}
-      <MoreTextWrap onClick={() => setIsShowMore(!isShowMore)}>
+      <MoreTextWrap>
         <VisitedWrap>
           <span>방문일 : </span>
           <span>{visited}</span>
         </VisitedWrap>
         {comment.length > textLimit.current &&
-          (isShowMore ? <button>닫기</button> : <button>더보기</button>)}
+          (isShowMore ? (
+            <button onClick={inShowMoreText}>닫기</button>
+          ) : (
+            <button onClick={inShowMoreText}>더보기</button>
+          ))}
       </MoreTextWrap>
       {/* 방문일 */}
     </MainTextWrap>

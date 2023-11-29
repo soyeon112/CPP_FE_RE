@@ -248,9 +248,11 @@ export const PlaceLocationWrap = styled.div`
   justify-content: space-between;
   align-items: baseline;
   div:first-child {
+    width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: start;
   }
   .locationIcon {
     font-size: 1.2rem;
