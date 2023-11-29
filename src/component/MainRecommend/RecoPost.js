@@ -1,9 +1,8 @@
 import React from 'react';
-import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import PostForm from './PostForm';
-import dummyData from './DummyReco.json';
+import dummy from '../../storeDummy.json';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
@@ -74,32 +73,20 @@ function RecoPost() {
 
   console.log(recoPost);
   useEffect(() => {
-    setRecoPost(dummyData);
+    setRecoPost(dummy);
   }, []);
-  /* 11.19 주석처리
-  const getRecoPost = async () => {
-    const res = await axios.get('http://api.cpp.co.kr:3300/posts/most-likes');
-    setRecoPost(res.data);
-  };
-
-  useEffect(() => {
-    getRecoPost();
-    console.log('메인 추천포스트 : ', recoPost);
-  }, []);
-*/
-  // 슬라이더 참고: https://velog.io/@mokyoungg/CodeReview-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC
-
   return (
     <RecommendItemWrap>
+      {console.log('저장된 데이터', recoPost)}
       {recoPost.cafeId !== null ? (
         <Slider {...settings}>
           {Object.values(recoPost).map((it) => (
             <PostForm
               key={it.id}
               postId={it.id}
-              photoURL={it.photoURL}
-              nickname={it.nickname}
-              profileURL={it.profileURL}
+              photoURL={it.photoURLs[0]}
+              nickname={it.user.nickname}
+              profileURL={it.user.profileURL}
             />
           ))}
         </Slider>

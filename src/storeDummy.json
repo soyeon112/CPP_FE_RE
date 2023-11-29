@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "content": "성수동 우디집 말만 들어봤는데 수원러도 이제 갈 수 있어요~ \n 사장님 잘생김😝, 커피맛있음👍🏻, 공간도 너무 예쁨💘 \n 행궁동 답게 주차는 조금 어렵고, 근처에 공영주차장이 있어서 거기에 주차하면됨! 도보2분거리\n 라스트오더는 오후 6시까지이니 참고하세욤~~",
+    "content": "성수동 우디집 말만 들어봤는데 수원러도 이제 갈 수 있어요~ \n사장님 잘생김😝, 커피맛있음👍🏻, 공간도 너무 예쁨💘 \n행궁동 답게 주차는 조금 어렵고, 근처에 공영주차장이 있어서 거기에 주차하면됨! 도보2분거리\n라스트오더는 오후 6시까지이니 참고하세욤~~",
     "views": 4000,
     "visited": "2023-11-25",
     "receiptURL": "asdasdqwaqwsd",
@@ -31,7 +31,7 @@
     "user": {
       "id": 30,
       "nickname": "카페충 와랄라랄랄",
-      "profileURL": "asdasfdadfdsafds"
+      "profileURL": "/image/ex-img2.jpg"
     }
   },
   {
@@ -45,12 +45,12 @@
     "isStored": true,
 
     "rate": {
-      "taste": 5,
-      "vibe": 4,
-      "service": 2,
-      "parking": 3,
-      "bathroom": 4,
-      "amenity": 5
+      "taste": 3,
+      "vibe": 2,
+      "service": 5,
+      "parking": 4,
+      "bathroom": 2,
+      "amenity": 1
     },
     "cafe": {
       "name": "정지영커피로스터즈 행궁본점",
@@ -59,14 +59,14 @@
       "openingHours": "12:00 - 22:00"
     },
     "photoURLs": [
-      "/image/ex-img.jpg",
+      "/image/ex-img3.jpg",
       "/image/ex-img2.jpg",
-      "/image/ex-img3.jpg"
+      "/image/ex-img1.jpg"
     ],
     "user": {
       "id": 30,
       "nickname": "카페충",
-      "profileURL": "asdasfdadfdsafds"
+      "profileURL": "/image/ex-img3.jpg"
     }
   },
   {
@@ -101,7 +101,7 @@
     "user": {
       "id": 30,
       "nickname": "카페충",
-      "profileURL": "asdasfdadfdsafds"
+      "profileURL": "/image/ex-img3.jpg"
     }
   },
   {
@@ -136,7 +136,7 @@
     "user": {
       "id": 30,
       "nickname": "카페충",
-      "profileURL": "asdasfdadfdsafds"
+      "profileURL": "/image/ex-img.jpg"
     }
   },
   {
@@ -164,14 +164,14 @@
       "openingHours": "12:00 - 24:00"
     },
     "photoURLs": [
-      "/image/ex-img.jpg",
+      "/image/ex-img3.jpg",
       "/image/ex-img2.jpg",
       "/image/ex-img3.jpg"
     ],
     "user": {
       "id": 30,
       "nickname": "카페충",
-      "profileURL": "asdasfdadfdsafds"
+      "profileURL": "/image/ex-img2.jpg"
     }
   }
 ]

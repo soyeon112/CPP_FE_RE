@@ -7,3 +7,5 @@ export const LinkStyle = styled(Link)`
   color: #000;
   text-decoration: none;
 `;
+
+export const grayColor = ' #aaaaaa';

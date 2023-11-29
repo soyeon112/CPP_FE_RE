@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom';
-// import '../../pages/Main/Main.css';
-import axios from 'axios';
-import DummyData from './storeList.json';
+import React, { useState, useEffect } from 'react';
+import dummy from '../../storeDummy.json';
 import {
   SearchBarWrap,
   SearchBarItem,
@@ -16,6 +13,8 @@ import {
 } from './styled';
 
 import { LinkStyle } from '../../CommonStyled';
+import { IoMdSearch } from 'react-icons/io';
+
 //component - 메인 상단 검색창
 
 function SearchBar({ placeholder }) {
@@ -28,7 +27,7 @@ function SearchBar({ placeholder }) {
   const [getSearch, setGetSearch] = useState();
 
   useEffect(() => {
-    setGetSearch(DummyData);
+    setGetSearch(dummy);
   }, []);
 
   return (
@@ -40,16 +39,14 @@ function SearchBar({ placeholder }) {
         value={search}
         onKeyUp={(e) => {
           {
+            e.preventDefault();
             setShowResult(true);
           }
         }}
         onChange={changeText}
       />
-      <SearchBtn
-        src={`${process.env.PUBLIC_URL}/image/search-icon.png`}
-        alt="검색아이콘"
-      />
 
+      <IoMdSearch className="searchIcon" />
       {/* 검색창 클릭시 검색결과 리스트 출력 */}
       {showResult ? (
         <ResultWrap $showResult onMouseLeave={() => setShowResult(false)}>
@@ -57,12 +54,12 @@ function SearchBar({ placeholder }) {
             <ResultTitle>카페별</ResultTitle>
             <ResultList>
               {getSearch
-                .filter((info) => info.storeInfo.name.includes(search))
+                .filter((info) => info.cafe.name.includes(search))
                 .map((info, key) => (
-                  <LinkStyle to={`/post/${info.storeInfo.postId}`}>
-                    <ResultListItem key={info.storeInfo.id}>
-                      {info.storeInfo.name}
-                      <ResultAddr>{info.storeInfo.address}</ResultAddr>
+                  <LinkStyle to={`/post/${info.id}`}>
+                    <ResultListItem key={info.id}>
+                      <span>{info.cafe.name}</span>
+                      <ResultAddr>{info.cafe.address}</ResultAddr>
                     </ResultListItem>
                   </LinkStyle>
                 ))}
@@ -73,12 +70,12 @@ function SearchBar({ placeholder }) {
             <ResultTitle>지역별</ResultTitle>
             <ResultList>
               {getSearch
-                .filter((info) => info.storeInfo.address.includes(search))
+                .filter((info) => info.cafe.address.includes(search))
                 .map((info, key) => (
-                  <LinkStyle to={`/post/${info.storeInfo.postId}`}>
-                    <ResultListItem key={info.storeInfo.id}>
-                      {info.storeInfo.name}
-                      <ResultAddr>{info.storeInfo.address}</ResultAddr>
+                  <LinkStyle to={`/post/${info.id}`}>
+                    <ResultListItem key={info.id}>
+                      <span> {info.cafe.name}</span>
+                      <ResultAddr>{info.cafe.address}</ResultAddr>
                     </ResultListItem>
                   </LinkStyle>
                 ))}

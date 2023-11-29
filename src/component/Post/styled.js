@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { mainColor, LinkStyle } from '../../../CommonStyled';
+import { mainColor, LinkStyle, grayColor } from '../../CommonStyled';
 
 export const InnerWidth = '480px';
+export const borderBottom = '1px solid #f0f0f0';
 export const PostWrap = styled.div`
   width: 645px;
   height: auto;
@@ -104,7 +105,7 @@ export const PlaceInfoWrap = styled.div`
   /* border: 1px solid blueviolet; */
   padding: 5px;
   box-sizing: border-box;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: ${borderBottom};
 
   @media (max-width: 500px) {
     width: 80%;
@@ -313,9 +314,90 @@ export const MenuInner = styled.div`
   }
 `;
 
+//별점
 export const StarRateWrap = styled.div`
   width: ${InnerWidth};
-  height: 300px;
-  background-color: pink;
+  height: auto;
   margin: 0 auto;
+  padding: 5px;
+  box-sizing: border-box;
+  border-bottom: ${borderBottom};
+  font-size: 1rem;
+  @media (max-width: 500px) {
+    width: 80%;
+  }
+`;
+
+export const RateInner = styled.div`
+  width: 50%;
+  height: 30px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  span {
+    display: block;
+    width: 30%;
+    text-align: left;
+  }
+  .colorStar {
+    color: ${mainColor};
+    margin: 0 5px;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+`;
+
+//본문
+export const MainTextWrap = styled.div`
+  width: ${InnerWidth};
+  line-height: 2rem;
+  margin: 0 auto;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: break-all;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+
+  @media (max-width: 500px) {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+`;
+
+export const MoreTextWrap = styled.div`
+  width: 100%;
+  margin: 10px 0 0;
+  position: relative;
+  button {
+    width: auto;
+    height: auto;
+    font-size: 1rem;
+    background-color: #fff;
+    border: none;
+    color: ${mainColor};
+    padding: 2px;
+    text-align: left;
+    &:hover {
+      cursor: pointer;
+      border-bottom: 1px solid ${mainColor};
+    }
+  }
+`;
+
+export const VisitedWrap = styled.div`
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  font-size: 0.75rem;
+  color: ${grayColor};
 `;

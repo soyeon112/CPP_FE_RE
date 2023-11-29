@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mainColor } from '../../CommonStyled';
+import { mainColor, grayColor } from '../../CommonStyled';
 
 export const SearchBarWrap = styled.div`
   position: relative;
@@ -7,6 +7,14 @@ export const SearchBarWrap = styled.div`
   height: 50px;
   margin: 0 auto 10px auto;
 
+  .searchIcon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 12px;
+    right: 20px;
+    color: ${grayColor};
+  }
   @media (max-width: 1280px) {
   }
   @media (max-width: 820px) {
@@ -20,7 +28,7 @@ export const SearchBarItem = styled.input`
   width: 100%;
   height: 40px;
   border-radius: 20px;
-  border: solid gray;
+  border: 1px solid ${grayColor};
   border-width: 1px;
   padding: 20px;
   box-sizing: border-box;
@@ -48,14 +56,10 @@ export const ResultWrap = styled.div`
   background-color: #fff;
   border-radius: 15px;
   font-size: 0.9rem;
-  border: solid rgb(210, 210, 210);
+  /* border: 1px solid rgb(210, 210, 210); */
+  border: 1px solid ${grayColor};
   z-index: 3;
 
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 820px) {
-    /* width: 95%; */
-  }
   @media (max-width: 500px) {
     height: auto;
     flex-direction: column;
@@ -64,7 +68,9 @@ export const ResultWrap = styled.div`
 export const ResultInner = styled.div`
   width: 50%;
   height: auto;
-  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  /* border: 1px solid blue; */
 
   @media (max-width: 500px) {
     width: 100%;
@@ -84,14 +90,19 @@ export const ResultList = styled.ul`
   height: auto;
 `;
 export const ResultListItem = styled.li`
-  /* margin-bottom: 10px; */
+  width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 10px 0;
   box-sizing: border-box;
   border-bottom: 1px solid #eaeaea;
   list-style: none;
-
+  span {
+    display: block;
+    width: 100%;
+  }
   &:hover {
     color: ${mainColor};
     font-family: 'PreB';
@@ -99,8 +110,9 @@ export const ResultListItem = styled.li`
 `;
 
 export const ResultAddr = styled.div`
-  margin-left: 10px;
-  color: gray;
+  width: 100%;
+  color: ${grayColor};
   font-size: 0.75rem;
   line-height: 0.9rem;
+  margin-top: 5px;
 `;

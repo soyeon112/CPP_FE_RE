@@ -1,7 +1,7 @@
-import React from 'react';
-
+import React, { useState, useRef, useMemo } from 'react';
+import { MainTextWrap, MoreTextWrap, VisitedWrap } from './styled';
 //본문 출력
-export default function PostTexts() {
+export default function PostTexts({ content, visited }) {
   const [isShowMore, setIsShowMore] = useState(false);
   const textLimit = useRef(60);
   let comment = content;
@@ -26,17 +26,18 @@ export default function PostTexts() {
   }, [isShowMore]);
 
   return (
-    <>
-      <div className="postText">{commenter}</div>
+    <MainTextWrap>
+      <div>{commenter}</div>
       {/* 본문 > 더보기 / 닫기 버튼 */}
-      <div onClick={() => setIsShowMore(!isShowMore)} className="postText">
+      <MoreTextWrap onClick={() => setIsShowMore(!isShowMore)}>
+        <VisitedWrap>
+          <span>방문일 : </span>
+          <span>{visited}</span>
+        </VisitedWrap>
         {comment.length > textLimit.current &&
-          (isShowMore ? (
-            <p className="textClose_More">닫기</p>
-          ) : (
-            <p className="textClose_More">더보기</p>
-          ))}
-      </div>
-    </>
+          (isShowMore ? <button>닫기</button> : <button>더보기</button>)}
+      </MoreTextWrap>
+      {/* 방문일 */}
+    </MainTextWrap>
   );
 }
