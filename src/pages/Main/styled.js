@@ -5,7 +5,6 @@ export const MainWrap = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  /* background-color: lavender; */
 `;
 
 export const BannerWrap = styled.div`

@@ -24,7 +24,6 @@ const VisibleArea = styled.div`
   height: auto;
   min-height: 100%;
   padding-bottom: 85px;
-  /* background-color: pink; */
 `;
 function App() {
   return (
