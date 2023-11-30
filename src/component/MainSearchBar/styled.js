@@ -21,6 +21,7 @@ export const SearchBarWrap = styled.div`
     width: 95%;
   }
   @media (max-width: 500px) {
+    width: 90%;
   }
 `;
 
@@ -34,6 +35,10 @@ export const SearchBarItem = styled.input`
   box-sizing: border-box;
   font-size: 1rem;
   outline-color: ${mainColor};
+
+  &::placeholder {
+    font-size: 0.9rem;
+  }
 `;
 
 export const SearchBtn = styled.img`

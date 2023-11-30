@@ -10,10 +10,9 @@ import styled from 'styled-components';
 //component - 메인 오늘의 추천 카페 영역
 
 const RecommendItemWrap = styled.div`
-  width: 850px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
-  /* background-color: green; */
 
   @media (max-width: 1280px) {
     width: 100%;

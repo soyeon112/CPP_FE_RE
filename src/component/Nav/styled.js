@@ -24,9 +24,10 @@ export const HeaderNav = styled.div`
   .navLi {
     margin-left: 25px;
     font-size: 0.9rem;
-    cursor: pointer;
+
     &:hover {
       color: ${mainColor};
+      cursor: pointer;
     }
 
     @media (max-width: 1280px) {

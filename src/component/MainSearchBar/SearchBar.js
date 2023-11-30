@@ -17,7 +17,7 @@ import { IoMdSearch } from 'react-icons/io';
 
 //component - 메인 상단 검색창
 
-function SearchBar({ placeholder }) {
+function SearchBar() {
   const [search, setSearch] = useState('');
   const [showResult, setShowResult] = useState(false);
   const changeText = (e) => {
@@ -35,7 +35,7 @@ function SearchBar({ placeholder }) {
       <SearchBarItem
         name="search"
         type="text"
-        placeholder={placeholder}
+        placeholder="지역 / 공간 이름을 입력해주세요."
         value={search}
         onKeyUp={(e) => {
           {

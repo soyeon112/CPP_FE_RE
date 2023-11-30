@@ -3,13 +3,12 @@ import styled from 'styled-components';
 
 const RecommendItem = styled.div`
   width: 100%;
-  /* height: auto; */
   height: 100%;
   display: flex;
   flex-direction: column;
 
   @media (max-width: 1280px) {
-    width: 95%;
+    /* width: 95%; */
   }
   @media (max-width: 820px) {
   }
@@ -22,12 +21,13 @@ const RecoImg = styled.div`
   /* height: 280px; */
   width: 95%;
   height: 280px;
-  /* background-color: pink; */
+
   background-image: url(${(props) => props.bgUrl});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  box-sizing: border-box;
   border-radius: 10px;
   border: none;
   &.hover {
@@ -37,6 +37,7 @@ const RecoImg = styled.div`
 
 const InnerUserInfo = styled.div`
   width: 90%;
+
   margin: 0 auto;
   display: flex;
   flex-direction: row;
