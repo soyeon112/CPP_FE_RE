@@ -34,7 +34,7 @@ export default function PostCafeInfo({ cafe, views }) {
         </PlaceInfoInnerL>
         <PlaceInfoInnerR>
           <div className="viewWrap">
-            <GrView />
+            <GrView className="viewIcon" />
             <p className="viewCount">{views}</p>
           </div>
           {/* 영수증 */}
@@ -96,13 +96,6 @@ function MenuIcon() {
     setIsMenu(!isMenu);
     console.log(isMenu);
   };
-  //   const openMenu = () => {
-  //     setClickMenu(true);
-  //     console.log('click menu');
-  //   };
-  //   const closeMenu = () => {
-  //     setClickMenu(false);
-  //   };
 
   return (
     <Modi_DelMenuWrap>

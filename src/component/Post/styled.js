@@ -108,7 +108,8 @@ export const PlaceInfoWrap = styled.div`
   border-bottom: ${borderBottom};
 
   @media (max-width: 500px) {
-    width: 80%;
+    /* width: 80%; */
+    width: 85%;
     margin: 0 auto;
   }
 `;
@@ -125,10 +126,10 @@ export const PlaceInfo = styled.div`
 
 export const PlaceInfoInnerL = styled.div`
   height: 30px;
-  width: auto;
+  /* width: auto; */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   .placeName {
     width: auto;
@@ -139,13 +140,14 @@ export const PlaceInfoInnerL = styled.div`
   }
   .infoIcon {
     font-size: 1rem;
-    margin-left: 10px;
+    margin-left: 7px;
     &:hover {
       cursor: pointer;
     }
   }
 
   @media (max-width: 500px) {
+    width: 55%;
     .placeName {
       font-size: 1.1rem;
     }
@@ -174,19 +176,19 @@ export const PlaceInfoInnerR = styled.div`
     }
   }
   .viewCount {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
   @media (max-width: 500px) {
-    width: 40%;
+    /* width: 40%; */
 
-    .vieweWrap,
     .receiptIcon,
     .likeIcon,
     .bookmarkIcon {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
-    .viewCount {
-      font-size: 0.6rem;
+    .viewCount,
+    .viewIcon {
+      font-size: 0.8rem;
     }
   }
 `;
@@ -194,7 +196,7 @@ export const PlaceInfoInnerR = styled.div`
 export const InfoPopup = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  left: -5px;
   width: ${InnerWidth};
   height: auto; //250px
   border-radius: 10px;
@@ -224,9 +226,7 @@ export const InfoPopup = styled.div`
   }
   @media (max-width: 500px) {
     width: 100%;
-    top: 0;
-    left: 0;
-
+    left: 0px;
     .title {
       font-size: 1.1rem;
     }
@@ -260,16 +260,18 @@ export const PlaceLocationWrap = styled.div`
   .placeAddr {
     text-align: left;
     font-size: 0.9rem;
-    margin-left: 2px;
+    /* margin-left: 2px; */
+    margin: 2px 0 0 2px;
     line-height: 1rem;
   }
 
   @media (max-width: 500px) {
     .locationIcon {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
     .placeAddr {
       font-size: 0.7rem;
+      margin: 0 0 1px 2px;
     }
   }
 `;
@@ -290,8 +292,8 @@ export const MenuInner = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,7 +302,7 @@ export const MenuInner = styled.div`
   background-color: #fff;
   border: 1px solid #f0f0f0;
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 5px;
     &:hover {
       cursor: pointer;
@@ -326,14 +328,14 @@ export const StarRateWrap = styled.div`
   border-bottom: ${borderBottom};
   font-size: 1rem;
   @media (max-width: 500px) {
-    width: 80%;
+    width: 85%; //80%
   }
 `;
 
 export const RateInner = styled.div`
   width: 50%;
   height: 30px;
-  margin: 10px 0;
+  margin: 7px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -342,6 +344,7 @@ export const RateInner = styled.div`
     display: block;
     width: 30%;
     text-align: left;
+    font-family: 'PreB';
   }
   .colorStar {
     color: ${mainColor};
@@ -349,7 +352,8 @@ export const RateInner = styled.div`
   }
   @media (max-width: 500px) {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin: 5px 0;
   }
 `;
 
@@ -357,7 +361,7 @@ export const RateInner = styled.div`
 export const MainTextWrap = styled.div`
   width: ${InnerWidth};
   line-height: 2rem;
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 5px;
   box-sizing: border-box;
   text-align: left;
@@ -369,7 +373,7 @@ export const MainTextWrap = styled.div`
   font-size: 1rem;
 
   @media (max-width: 500px) {
-    width: 80%;
+    width: 85%;
     font-size: 0.9rem;
   }
 `;
@@ -381,12 +385,13 @@ export const MoreTextWrap = styled.div`
   button {
     width: auto;
     height: auto;
-    font-size: 1rem;
+    font-size: 0.75rem;
     background-color: #fff;
     border: none;
     color: ${mainColor};
     padding: 2px;
     text-align: left;
+    border-radius: 0;
     &:hover {
       cursor: pointer;
       border-bottom: 1px solid ${mainColor};
