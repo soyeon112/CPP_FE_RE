@@ -13,7 +13,7 @@ const FooterWrap = styled.div`
 
   p {
     margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
     color: #808080;
   }
 `;

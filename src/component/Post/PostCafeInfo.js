@@ -67,9 +67,7 @@ function InfoHover(props) {
   };
   return (
     <>
-      <div onClick={popupState}>
-        <FaCircleInfo className="infoIcon" />
-      </div>
+      <FaCircleInfo className="infoIcon" onClick={popupState} />
       {isPopup && (
         <InfoPopup>
           <div>

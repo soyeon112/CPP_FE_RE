@@ -115,6 +115,7 @@ export const PlaceInfoWrap = styled.div`
 `;
 export const PlaceInfo = styled.div`
   width: 100%;
+  height: auto;
   /* padding: 10px; */
   box-sizing: border-box;
   display: flex;
@@ -122,15 +123,19 @@ export const PlaceInfo = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin-bottom: 20px;
 `;
 
 export const PlaceInfoInnerL = styled.div`
   height: 30px;
-  /* width: auto; */
+  width: auto;
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  padding: 0 5px;
+  box-sizing: border-box;
+
   .placeName {
     width: auto;
     text-align: left;
@@ -148,27 +153,31 @@ export const PlaceInfoInnerL = styled.div`
 
   @media (max-width: 500px) {
     width: 55%;
+    height: auto;
     .placeName {
       font-size: 1.1rem;
     }
     .infoIcon {
-      font-size: 0.9rem;
+      /* font-size: 0.9rem; */
       margin-top: 2px;
     }
   }
 `;
 export const PlaceInfoInnerR = styled.div`
-  width: 35%;
+  width: 30%;
   height: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  .vieweWrap,
+
+  .viewWrap {
+    width: 30px;
+    height: 30px;
+  }
+
   .receiptIcon,
   .likeIcon,
   .bookmarkIcon {
-    /* width: 30px;
-    height: 80%; */
     font-size: 1.4rem;
     margin-top: 3px;
     &:hover {
@@ -176,19 +185,25 @@ export const PlaceInfoInnerR = styled.div`
     }
   }
   .viewCount {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
   @media (max-width: 500px) {
-    /* width: 40%; */
+    .viewWrap {
+      height: auto;
+
+      .viewIcon {
+        font-size: 0.8rem;
+      }
+    }
 
     .receiptIcon,
     .likeIcon,
     .bookmarkIcon {
       font-size: 0.9rem;
     }
-    .viewCount,
-    .viewIcon {
-      font-size: 0.8rem;
+
+    .viewCount {
+      font-size: 0.5rem;
     }
   }
 `;
