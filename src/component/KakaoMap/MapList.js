@@ -1,9 +1,21 @@
-import React, { useEffect, useState, useRef } from 'react';
-import './MapList.css';
-import SearchBar from '../MainSearchBar/SearchBar';
+import React, { useState, useRef } from 'react';
 import { CustomOverlayMap, Map, MapMarker } from 'react-kakao-maps-sdk';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+
+import SearchBar from '../MainSearchBar/SearchBar';
+import { LinkStyle } from '../../CommonStyled';
+import {
+  MapPageWrap,
+  InnerWrap,
+  InnerRWrap,
+  KakaoMapWrap,
+  MapInnerTop,
+  GetLocationBtn,
+  ListItem,
+  ItemInner,
+} from './styled';
+
+import './MapList.css';
 
 const { kakao } = window;
 
@@ -40,22 +52,22 @@ const MapList = () => {
 
   return (
     <>
-      <div>
-        <SearchBar placeholder={'지역 / 공간 이름을 입력해주세요.'} />
-      </div>
-      <div className="mapPageContainer">
-        <div className="mapPageTitle">
-          내 주변 카페 보기
-          <button id="mapCurrentHandler" onClick={currentMapHandler}>
-            현 위치 가져오기
-          </button>
+      <SearchBar />
+      <MapPageWrap>
+        <InnerWrap>
+          <MapInnerTop>
+            <span>내 주변 카페보기</span>
+            <GetLocationBtn onClick={currentMapHandler}>
+              현 위치 가져오기
+            </GetLocationBtn>
+          </MapInnerTop>
           <Map // 지도를 표시할 Container
             center={{
               // 지도의 중심좌표
               lat: 33.33,
               lng: 126.55,
             }}
-            id="mapPage"
+            id="kakaoMap"
             level={11} // 지도의 확대 레벨
             ref={mapRef}
           >
@@ -83,28 +95,33 @@ const MapList = () => {
                 </>
               ))}
           </Map>
-        </div>
-        <div className="mapListTitle">
-          리스트 영역
-          <div id="mapList">
-            {cafesInCurMap &&
-              cafesInCurMap.map((item, index) => (
-                <div key={index}>
-                  <img
-                    className="mapItemImg"
-                    src={item.photoURL}
-                    width={50}
-                    height={50}
-                  ></img>
-                  <Link to={`/post/${item.postId}`} className="mapItemCafeName">
-                    {item.name}
-                    <div className="mapItemCafeAddr">{item.address}</div>
-                  </Link>
-                </div>
-              ))}
+        </InnerWrap>
+
+        <InnerWrap>
+          <MapInnerTop>
+            <span>리스트 영역</span>
+          </MapInnerTop>
+
+          <div id="listWrap">
+            <ListItem>
+              <ItemInner></ItemInner>
+
+              <ItemInner>
+                <p className="mapPlaceName">소길별하</p>
+                <p className="mapItemCafeAddr">제주시, 제주시 서부</p>
+              </ItemInner>
+            </ListItem>
+            <ListItem>
+              <ItemInner></ItemInner>
+
+              <ItemInner>
+                <p className="mapPlaceName">공간 이름</p>
+                <p className="mapItemCafeAddr">주소</p>
+              </ItemInner>
+            </ListItem>
           </div>
-        </div>
-      </div>
+        </InnerWrap>
+      </MapPageWrap>
     </>
   );
 };

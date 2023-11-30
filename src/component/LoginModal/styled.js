@@ -164,12 +164,6 @@ export const LoginBtn = styled.button`
   }
 `;
 
-// export const JoinBtn = styled(LoginBtn)`
-//   margin: 10px auto;
-//   color: ${mainColor};
-//   /* border: 1px solid ${mainColor}; */
-// `;
-
 export const JoinBtn = styled.button`
   margin: 10px auto;
   font-size: 0.9rem;

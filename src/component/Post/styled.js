@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { mainColor, LinkStyle, grayColor } from '../../CommonStyled';
+import { mainColor, LinkStyle, grayColor, grayLine } from '../../CommonStyled';
 
 export const InnerWidth = '480px';
-export const borderBottom = '1px solid #f0f0f0';
 export const PostWrap = styled.div`
   width: 645px;
   height: auto;
@@ -105,7 +104,7 @@ export const PlaceInfoWrap = styled.div`
   /* border: 1px solid blueviolet; */
   padding: 5px;
   box-sizing: border-box;
-  border-bottom: ${borderBottom};
+  border-bottom: ${grayLine};
 
   @media (max-width: 500px) {
     /* width: 80%; */
@@ -341,7 +340,7 @@ export const StarRateWrap = styled.div`
   margin: 0 auto;
   padding: 5px;
   box-sizing: border-box;
-  border-bottom: ${borderBottom};
+  border-bottom: ${grayLine};
   font-size: 1rem;
   @media (max-width: 500px) {
     width: 85%; //80%

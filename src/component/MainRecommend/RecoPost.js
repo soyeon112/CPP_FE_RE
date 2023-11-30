@@ -76,7 +76,6 @@ function RecoPost() {
   }, []);
   return (
     <RecommendItemWrap>
-      {console.log('저장된 데이터', recoPost)}
       {recoPost.cafeId !== null ? (
         <Slider {...settings}>
           {Object.values(recoPost).map((it) => (
