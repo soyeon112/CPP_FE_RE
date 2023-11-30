@@ -115,7 +115,7 @@ export const PlaceInfoWrap = styled.div`
 `;
 export const PlaceInfo = styled.div`
   width: 100%;
-  height: auto;
+  height: 100%;
   /* padding: 10px; */
   box-sizing: border-box;
   display: flex;
@@ -127,25 +127,28 @@ export const PlaceInfo = styled.div`
 `;
 
 export const PlaceInfoInnerL = styled.div`
-  height: 30px;
-  width: auto;
+  width: 70%;
+  height: auto; //30px
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  padding: 0 5px;
+  padding: 5px 5px;
   box-sizing: border-box;
 
   .placeName {
-    width: auto;
+    height: 100%;
+    max-width: 80%;
     text-align: left;
     font-family: 'PreB';
     font-size: 1.3rem;
     color: ${mainColor};
+    margin-right: 5px;
   }
   .infoIcon {
-    font-size: 1rem;
-    margin-left: 7px;
+    width: 15px;
+    height: 15px;
+
     &:hover {
       cursor: pointer;
     }
@@ -153,13 +156,8 @@ export const PlaceInfoInnerL = styled.div`
 
   @media (max-width: 500px) {
     width: 55%;
-    height: auto;
     .placeName {
       font-size: 1.1rem;
-    }
-    .infoIcon {
-      /* font-size: 0.9rem; */
-      margin-top: 2px;
     }
   }
 `;
@@ -169,6 +167,7 @@ export const PlaceInfoInnerR = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   .viewWrap {
     width: 30px;
@@ -178,8 +177,8 @@ export const PlaceInfoInnerR = styled.div`
   .receiptIcon,
   .likeIcon,
   .bookmarkIcon {
+    width: 30px;
     font-size: 1.4rem;
-    margin-top: 3px;
     &:hover {
       cursor: ${(props) => (props.onClick ? 'pointer' : '')};
     }
@@ -188,6 +187,7 @@ export const PlaceInfoInnerR = styled.div`
     font-size: 0.7rem;
   }
   @media (max-width: 500px) {
+    width: 35%;
     .viewWrap {
       height: auto;
 
@@ -199,11 +199,12 @@ export const PlaceInfoInnerR = styled.div`
     .receiptIcon,
     .likeIcon,
     .bookmarkIcon {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
     .viewCount {
       font-size: 0.5rem;
+      font-family: 'PreB';
     }
   }
 `;
