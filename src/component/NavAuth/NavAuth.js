@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 import { authAction } from '../../store/auth';
+import { modalAction } from '../../store/modal';
 
 import { HeaderNav, LinkHover } from './styled';
 
@@ -12,6 +13,7 @@ function Nav() {
 
   const LogoutHandler = () => {
     dispatch(authAction.logout());
+    dispatch(modalAction.close());
   };
 
   return (

@@ -15,7 +15,8 @@ import {
   ItemInner,
 } from './styled';
 
-import './MapList.css';
+import dummy from '../../storeDummy.json';
+// import './MapList.css';
 
 const { kakao } = window;
 
@@ -40,14 +41,16 @@ const MapList = () => {
     };
     console.log(currentMapInfo.swLatLng.lat);
 
-    // axios 요청
-    const res = await axios
-      .get
-      // `http://api.cpp.co.kr:3300/cafes/map?swLat=${currentMapInfo.swLatLng.lat}&swLng=${currentMapInfo.swLatLng.lng}&neLat=${currentMapInfo.neLatLng.lat}&neLng=${currentMapInfo.neLatLng.lng}`
-      ();
-
-    setCafesInCurMap(res.data);
+    setCafesInCurMap(dummy);
     console.log(cafesInCurMap);
+    // axios 요청
+    //   const res = await axios
+    //     .get
+    //     // `http://api.cpp.co.kr:3300/cafes/map?swLat=${currentMapInfo.swLatLng.lat}&swLng=${currentMapInfo.swLatLng.lng}&neLat=${currentMapInfo.neLatLng.lat}&neLng=${currentMapInfo.neLatLng.lng}`
+    //     ();
+
+    //   setCafesInCurMap(res.data);
+    //   console.log(cafesInCurMap);
   };
 
   return (

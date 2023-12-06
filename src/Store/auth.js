@@ -7,9 +7,11 @@ const authSlice = createSlice({
   reducers: {
     login(state) {
       state.isAuth = true;
+      console.log('로그인', state.isAuth);
     },
     logout(state) {
       state.isAuth = false;
+      console.log('로그아웃', state.isAuth);
     },
   },
 });

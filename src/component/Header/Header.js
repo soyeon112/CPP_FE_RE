@@ -11,6 +11,14 @@ import NavAuth from '../NavAuth/NavAuth';
 function Header() {
   const isAuth = useSelector((state) => state.auth.isAuth);
 
+  const isModal = useSelector((state) => state.modal.isModal);
+
+  {
+    isModal
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'unset');
+  }
+
   return (
     <Fragment>
       <HeaderWrap>
@@ -23,7 +31,7 @@ function Header() {
             />
           </Link>
         </InnerLogoSection>
-        {!isAuth && <Nav />}
+        {!isAuth && <Nav isModal={isModal} />}
         {isAuth && <NavAuth />}
       </HeaderWrap>
     </Fragment>

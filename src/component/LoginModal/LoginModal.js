@@ -13,31 +13,33 @@ import { IoIosClose } from 'react-icons/io';
 
 import { useDispatch } from 'react-redux';
 import { authAction } from '../../store/auth';
+import { modalAction } from '../../store/modal';
 
-function LoginModal({ closeLoginModal }) {
+function LoginModal() {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
 
   const dispatch = useDispatch();
-
   const LoginHandler = () => {
+    dispatch(modalAction.close());
     dispatch(authAction.login());
+  };
+
+  const ModalCloseHandler = () => {
+    dispatch(modalAction.close());
   };
 
   //회원가입페이지 open
   const openJoin = () => {
+    dispatch(modalAction.close());
     window.open('/join', '_blank');
-    closeLoginModal(false);
   };
 
   return (
     <ModalBg>
       <ModalInner>
         <InnerTop>
-          <IoIosClose
-            className="loginModalClose"
-            onClick={() => closeLoginModal(false)}
-          />
+          <IoIosClose className="loginModalClose" onClick={ModalCloseHandler} />
           <p className="loginTitle">로그인</p>
         </InnerTop>
         <InnerMiddle>

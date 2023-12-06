@@ -63,9 +63,6 @@ export const InnerWrap = styled.div`
   padding: 10px;
   box-sizing: border-box;
 
-  #kakaoMap {
-    border: 1px solid ${lightGrayColor};
-  }
   #kakaoMap,
   #listWrap {
     position: relative;
@@ -73,6 +70,7 @@ export const InnerWrap = styled.div`
     margin-top: 10px;
     background: #fff;
     border-radius: 10px;
+    border: 1px solid ${lightGrayColor};
   }
 
   @media (max-width: 820px) {
@@ -81,6 +79,7 @@ export const InnerWrap = styled.div`
     #listWrap {
       width: 100%;
       height: auto;
+      border: none;
     }
   }
   @media (max-width: 500px) {
@@ -90,13 +89,16 @@ export const InnerWrap = styled.div`
 export const ListItem = styled.div`
   width: auto;
   height: 100px;
-  /* margin: 10px; */
-  margin: 10px auto;
+  margin: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 820px) {
+    margin: 10px auto;
+  }
 `;
 
 export const ItemInner = styled.div`
