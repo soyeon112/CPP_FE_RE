@@ -77,7 +77,7 @@ function MapPage() {
       <MapPageWrap>
         <InnerWrap>
           <MapInnerTop>
-            <span>내 주변 카페보기</span>
+            <span className="mapTitle">내 주변 카페보기</span>
             {/* <GetLocationBtn onClick={() => GetMyLocation()}>
               현 위치 가져오기
             </GetLocationBtn> */}
@@ -95,7 +95,10 @@ function MapPage() {
         </InnerWrap>
         <InnerWrap>
           <MapInnerTop>
-            <span>카페 목록</span>
+            <span className="mapTitle">카페 목록</span>
+            <span className="mapSubTitle">
+              썸네일 클릭시 해당 카페의 포스팅으로 이동합니다.
+            </span>
           </MapInnerTop>
 
           <div id="listWrap">

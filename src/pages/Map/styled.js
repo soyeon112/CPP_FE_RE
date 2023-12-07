@@ -31,17 +31,25 @@ export const MapInnerTop = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  span {
+  .mapTitle {
     font-size: 1rem;
     font-family: 'PreB';
     color: ${mainColor};
+  }
+  .mapSubTitle {
+    font-size: 0.8rem;
+    font-family: 'PreR';
+    color: ${grayColor};
   }
 
   @media (max-width: 820px) {
   }
   @media (max-width: 500px) {
-    span {
+    .mapTitle {
       font-size: 0.9rem;
+    }
+    .mapSubTitle {
+      font-size: 0.7rem;
     }
   }
 `;
@@ -120,6 +128,12 @@ export const ItemInner = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      transition: opacity 0.5s;
+      opacity: 0.6;
+    }
   }
   &:last-child {
     width: 100%;
