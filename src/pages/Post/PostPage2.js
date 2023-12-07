@@ -21,7 +21,7 @@ function PostPage() {
     dummy.map((store) => {
       if (store.id === Number(params.id)) {
         setStoreData(store);
-        console.log(storeData);
+        console.log('storeData', storeData);
       }
     });
   };

@@ -88,7 +88,7 @@ export const InnerWrap = styled.div`
 
 export const ListItem = styled.div`
   width: auto;
-  height: 100px;
+  height: 120px;
   margin: 10px;
   box-sizing: border-box;
   display: flex;
@@ -102,7 +102,7 @@ export const ListItem = styled.div`
 `;
 
 export const ItemInner = styled.div`
-  width: 60%;
+  width: 100%;
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -115,34 +115,43 @@ export const ItemInner = styled.div`
   &:first-child {
     width: 40%;
     margin-right: 5px;
+    background-image: url(${(props) => process.env.PUBLIC_URL + props.url});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
   }
   &:last-child {
+    width: 100%;
     margin-left: 5px;
+
     &:hover {
       cursor: pointer;
-      .mapPlaceName {
-        color: ${mainColor};
-      }
+      background-color: rgba(252, 82, 48, 0.1);
     }
   }
 
   p {
     margin: 10px 0;
+  }
+  .mapItemCafeAddr {
     font-size: 0.8rem;
     color: ${grayColor};
   }
-  .mapPlaceName {
-    font-family: 'PreB';
-    font-size: 1.1rem;
-    color: #000;
-  }
 
   @media (max-width: 500px) {
-    p {
-      font-size: 0.8rem;
+    .mapItemCafeAddr {
+      font-size: 0.75rem;
     }
-    .mapPlaceName {
-      font-size: 0.9rem;
-    }
+  }
+`;
+
+export const MapPlaceName = styled.p`
+  font-family: 'PreB';
+  font-size: 1.1rem;
+  color: ${(props) => props.color || 'green'};
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
   }
 `;

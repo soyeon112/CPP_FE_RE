@@ -7,11 +7,9 @@ const modalSlice = createSlice({
   reducers: {
     open(state) {
       state.isModal = true;
-      console.log('open', state.isModal);
     },
     close(state) {
       state.isModal = false;
-      console.log('close', state.isModal);
     },
   },
 });

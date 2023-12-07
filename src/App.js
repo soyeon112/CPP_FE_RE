@@ -9,7 +9,7 @@ import Join from './pages/Join/Join';
 import Policy from './component/Join/Policy';
 import Login from './component/LoginModal/LoginModal';
 import Main from './pages/Main/Main';
-import MapList from './component/KakaoMap/MapList';
+import MapPage from './pages/Map/MapPage';
 import Mypage from './pages/Mypage/Mypage';
 import ProfileModify from './pages/Mypage/ProfileModify';
 import UserDrop from './pages/Mypage/UserDrop';
@@ -17,6 +17,7 @@ import PostPage from './pages/Post/PostPage2';
 import Posting from './pages/Post/Posting';
 import OtherPost from './component/Post/OtherPost';
 
+import GetMyLocation from './component/Map/GetMyLocation';
 const AllFont = styled.div`
   font-family: 'PreR';
 `;
@@ -42,7 +43,7 @@ function App() {
             <Route path="/modify" element={<ProfileModify />} />
             <Route path="/userdrop" element={<UserDrop />} />
             <Route path="/posting" element={<Posting />} />
-            <Route path="/map" element={<MapList />} />
+            <Route path="/map" element={<MapPage />} />
           </Routes>
         </VisibleArea>
         <Footer />
