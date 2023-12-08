@@ -11,13 +11,15 @@ import {
   InnerWrap,
   MapInnerTop,
   GetLocationBtn,
+  ThumbLink,
   ListItem,
   ItemInner,
   MapPlaceName,
 } from './styled';
-import { mainColor } from '../../CommonStyled';
+import { mainColor, LinkStyle } from '../../CommonStyled';
 
 import dummy from '../../storeDummy.json';
+import { Link } from 'react-router-dom';
 
 //page - 카카오지도 페이지 ( 현재 위치 별 카페 보기 페이지 )
 function MapPage() {
@@ -114,10 +116,10 @@ function MapPage() {
                   let addr = it.address.split(' ', 5);
                   return (
                     <ListItem onClick={() => selectListHandler(key)}>
-                      <ItemInner
-                        className="mapPlaceImg"
-                        url={it.thumb}
-                      ></ItemInner>
+                      <ThumbLink to={`/post/${key + 1}`} url={it.thumb}>
+                        <ItemInner className="mapPlaceImg" url={it.thumb} />
+                      </ThumbLink>
+
                       <ItemInner>
                         <MapPlaceName color={selectColor}>
                           {it.name}
