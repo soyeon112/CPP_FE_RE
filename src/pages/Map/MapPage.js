@@ -9,8 +9,12 @@ import SearchBar from '../../component/MainSearchBar/SearchBar';
 import {
   MapPageWrap,
   InnerWrap,
+  InnerWrapMap,
+  InnerWrapList,
   MapInnerTop,
   GetLocationBtn,
+  MapLayer,
+  InnerLayer,
   ThumbLink,
   ListItem,
   ItemInner,
@@ -77,12 +81,12 @@ function MapPage() {
     <Fragment>
       <SearchBar />
       <MapPageWrap>
-        <InnerWrap>
-          <MapInnerTop>
+        <InnerWrapMap>
+          <MapInnerTop className="mapTitleWrap">
             <span className="mapTitle">내 주변 카페보기</span>
-            {/* <GetLocationBtn onClick={() => GetMyLocation()}>
+            <GetLocationBtn onClick={() => GetMyLocation()}>
               현 위치 가져오기
-            </GetLocationBtn> */}
+            </GetLocationBtn>
           </MapInnerTop>
           {markerArr ? (
             <KakaoMap
@@ -94,8 +98,16 @@ function MapPage() {
           ) : (
             ''
           )}
-        </InnerWrap>
-        <InnerWrap>
+          {/* 500px일때 맵 하단 인포 레이어 */}
+          <MapLayer>
+            <InnerLayer>
+              <div className="layerThumb"></div>
+              <p className="layerTitle">정지영카페로스터즈</p>
+            </InnerLayer>
+          </MapLayer>
+        </InnerWrapMap>
+
+        <InnerWrapList>
           <MapInnerTop>
             <span className="mapTitle">카페 목록</span>
             <span className="mapSubTitle">
@@ -131,7 +143,7 @@ function MapPage() {
                 })
               : ''}
           </div>
-        </InnerWrap>
+        </InnerWrapList>
       </MapPageWrap>
     </Fragment>
   );
