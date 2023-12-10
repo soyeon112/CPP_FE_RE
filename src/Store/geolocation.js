@@ -1,4 +1,4 @@
-import { CreateSlice, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialGeolocation = { lat: 0, lng: 0 };
 const geoSlice = createSlice({
@@ -8,6 +8,7 @@ const geoSlice = createSlice({
     getGeo(state, action) {
       state.lat = action.payload.lat;
       state.lng = action.payload.lng;
+      console.log(state.lat, state.lng);
     },
   },
 });

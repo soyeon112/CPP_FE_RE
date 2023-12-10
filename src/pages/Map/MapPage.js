@@ -2,9 +2,11 @@ import React, { useState, useRef, useLayoutEffect } from 'react';
 import { Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { MarkerIdAction } from '../../store/markerId';
+import { GeoAction } from '../../store/geolocation';
 
 import KakaoMap from '../../component/Map/KakaoMap';
 import GetMyLocation from '../../component/Map/GetMyLocation';
+
 import SearchBar from '../../component/MainSearchBar/SearchBar';
 import {
   MapPageWrap,
@@ -31,6 +33,8 @@ function MapPage() {
 
   // -- 리덕스 (맵에서 선택된 마커 id)
   const reduxMarker = useSelector((state) => state.marker.markerId);
+  const reduxLat = useSelector((state) => state.geolocation.lat);
+  const reduxLng = useSelector((state) => state.geolocation.lng);
 
   //선택된 카페 id 리덕스 저장
   const dispatch = useDispatch();
@@ -74,10 +78,6 @@ function MapPage() {
     console.log('currentMap Info', map.getCenter());
   };
 
-  //geolocation
-  let currentLat = 37.28423901671409,
-    currentLng = 127.01535872333992;
-  const [selectInfo, setSelectInfo] = useState();
   return (
     <Fragment>
       {/* <SearchBar /> */}
@@ -85,14 +85,12 @@ function MapPage() {
         <InnerWrapMap>
           <MapInnerTop className="mapTitleWrap">
             <span className="mapTitle">내 주변 카페보기</span>
-            <GetLocationBtn onClick={() => GetMyLocation()}>
-              현 위치 가져오기
-            </GetLocationBtn>
+            <GetMyLocation />
           </MapInnerTop>
           {markerArr ? (
             <KakaoMap
-              currentLat={currentLat}
-              currentLng={currentLng}
+              currentLat={reduxLat}
+              currentLng={reduxLng}
               markerLocation={markerArr}
               mapRef={mapRef}
             />
@@ -103,9 +101,7 @@ function MapPage() {
           <MapLayer>
             <InnerLayer>
               {Object.entries(markerArr).map((it, key) => {
-                console.log(it[1].thumb);
                 if (it[1].id === reduxMarker) {
-                  console.log(it[1].thumb);
                   return (
                     <>
                       {/* <div className="layerThumb" src={it[1].thumb} /> */}

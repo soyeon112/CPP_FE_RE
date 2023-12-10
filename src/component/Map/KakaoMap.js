@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
 
 import '../../pages/Map/styled';
@@ -14,14 +14,12 @@ function KakaoMap({ currentLat, currentLng, markerLocation, mapRef }) {
   };
 
   const onClickMarker = (key) => {
-    console.log('key??', key);
     markerIdSaveHandler(key);
   };
 
   const reduxMarker = useSelector((state) => state.marker.markerId);
   let markerUrl = `marker_brown`;
 
-  console.log('카카오', currentLat, currentLng);
   return (
     <>
       {/* 지도 표시 container */}
