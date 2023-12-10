@@ -42,6 +42,7 @@ function MapPage() {
   let markerArr = [];
   dummy.map((it) => {
     markerArr.push({
+      id: it.id,
       name: it.cafe.name,
       lat: it.location.lat,
       lng: it.location.lng,
@@ -76,7 +77,7 @@ function MapPage() {
   //geolocation
   let currentLat = 37.28423901671409,
     currentLng = 127.01535872333992;
-
+  const [selectInfo, setSelectInfo] = useState();
   return (
     <Fragment>
       <SearchBar />
@@ -101,8 +102,18 @@ function MapPage() {
           {/* 500px일때 맵 하단 인포 레이어 */}
           <MapLayer>
             <InnerLayer>
-              <div className="layerThumb"></div>
-              <p className="layerTitle">정지영카페로스터즈</p>
+              {Object.entries(markerArr).map((it, key) => {
+                console.log(it[1].thumb);
+                if (it[1].id === reduxMarker) {
+                  console.log(it[1].thumb);
+                  return (
+                    <>
+                      {/* <div className="layerThumb" src={it[1].thumb} /> */}
+                      <p className="layerTitle">{it[1].name}</p>
+                    </>
+                  );
+                }
+              })}
             </InnerLayer>
           </MapLayer>
         </InnerWrapMap>
@@ -118,7 +129,7 @@ function MapPage() {
           <div id="listWrap">
             {markerArr
               ? markerArr.map((it, key) => {
-                  if (reduxMarker === key) {
+                  if (reduxMarker === it.id) {
                     selectColor = mainColor;
                   } else {
                     selectColor = '#000';
@@ -127,8 +138,8 @@ function MapPage() {
                   //주소 '건물번호' 기준으로 자름
                   let addr = it.address.split(' ', 5);
                   return (
-                    <ListItem onClick={() => selectListHandler(key)}>
-                      <ThumbLink to={`/post/${key + 1}`} url={it.thumb}>
+                    <ListItem onClick={() => selectListHandler(it.id)}>
+                      <ThumbLink to={`/post/${it.id}`} url={it.thumb}>
                         <ItemInner className="mapPlaceImg" url={it.thumb} />
                       </ThumbLink>
 

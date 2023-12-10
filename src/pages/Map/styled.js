@@ -215,11 +215,11 @@ export const MapLayer = styled.div`
   bottom: 0;
   z-index: 99;
   width: 95%;
-  height: 80px;
+  height: 50px; //80px
   padding: 15px;
   margin: 10px;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.65);
   border-radius: 0 0 10px 10px;
   @media (max-width: 500px) {
     display: block;
@@ -231,15 +231,20 @@ export const InnerLayer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  /* justify-content: start; */
+  justify-content: end;
   .layerThumb {
     width: 20%;
     height: 100%;
-    background-color: #fff;
+    background-image: url(${(props) => process.env.PUBLIC_URL + props.src});
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
     border-radius: 5px;
   }
   .layerTitle {
-    margin: 5px 0 0 20px;
+    /* margin: 5px 0 0 20px; */
     color: #fff;
     font-family: 'PreB';
     font-size: 1rem;

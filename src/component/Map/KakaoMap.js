@@ -14,6 +14,7 @@ function KakaoMap({ currentLat, currentLng, markerLocation, mapRef }) {
   };
 
   const onClickMarker = (key) => {
+    console.log('key??', key);
     markerIdSaveHandler(key);
   };
 
@@ -35,14 +36,14 @@ function KakaoMap({ currentLat, currentLng, markerLocation, mapRef }) {
         ref={mapRef}
       >
         {markerLocation.map((it, key) => {
-          if (reduxMarker === key) {
+          if (reduxMarker === it.id) {
             markerUrl = 'marker_color';
           } else {
             markerUrl = 'marker_brown';
           }
           return (
             <MapMarker
-              key={key}
+              key={it.id}
               title={it.name}
               position={{
                 lat: it.lat,
@@ -52,7 +53,7 @@ function KakaoMap({ currentLat, currentLng, markerLocation, mapRef }) {
                 src: process.env.PUBLIC_URL + `/image/${markerUrl}.png`,
                 size: { width: 50, height: 50 },
               }}
-              onClick={() => onClickMarker(key)}
+              onClick={() => onClickMarker(it.id)}
             />
           );
         })}
