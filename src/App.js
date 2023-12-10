@@ -24,7 +24,7 @@ const AllFont = styled.div`
 const VisibleArea = styled.div`
   height: auto;
   min-height: 100%;
-  padding-bottom: 85px;
+  /* padding-bottom: 85px; */
 `;
 function App() {
   return (

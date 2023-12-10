@@ -80,7 +80,7 @@ function MapPage() {
   const [selectInfo, setSelectInfo] = useState();
   return (
     <Fragment>
-      <SearchBar />
+      {/* <SearchBar /> */}
       <MapPageWrap>
         <InnerWrapMap>
           <MapInnerTop className="mapTitleWrap">
