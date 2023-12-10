@@ -57,26 +57,7 @@ function MapPage() {
 
   // -- 카카오 맵 관련
   const mapRef = useRef();
-  const [cafesInCurMap, setCafesInCurMap] = useState();
-  const currentMapHandler = async () => {
-    // 현재 지도 정보 설정
-    const map = mapRef.current;
-    console.log('map', map);
-    const currentMapInfo = {
-      //남서쪽
-      swLatLng: {
-        lat: map.getBounds().getSouthWest().getLat(),
-        lng: map.getBounds().getSouthWest().getLng(),
-      },
-      //북동쪽
-      neLatLng: {
-        lat: map.getBounds().getNorthEast().getLat(),
-        lng: map.getBounds().getNorthEast().getLng(),
-      },
-    };
-
-    console.log('currentMap Info', map.getCenter());
-  };
+  const map = mapRef.current;
 
   return (
     <Fragment>

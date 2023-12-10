@@ -12,7 +12,6 @@ function GetMyLocation() {
   let lat, lng;
 
   const getLocation = () => {
-    console.log('버튼클릭');
     navigator.geolocation.getCurrentPosition((position) => {
       if (position) {
         console.log(

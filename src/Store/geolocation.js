@@ -8,7 +8,6 @@ const geoSlice = createSlice({
     getGeo(state, action) {
       state.lat = action.payload.lat;
       state.lng = action.payload.lng;
-      console.log(state.lat, state.lng);
     },
   },
 });

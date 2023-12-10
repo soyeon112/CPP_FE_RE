@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 import { SliderWrap, SliderArrowWrap, UserInfoWrap } from './styled';
+import { IoIosArrowBack } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
+
 export default function PostPhotoSlider({ user, photoURLs }) {
   const [countImg, setCountImg] = useState(0);
 
@@ -21,13 +24,7 @@ export default function PostPhotoSlider({ user, photoURLs }) {
     <SliderWrap>
       <SliderArrowWrap>
         {countImg !== 0 ? (
-          <img
-            className="arrowBtn"
-            name="arrowLeft"
-            onClick={ArrowLeft}
-            src={`${process.env.PUBLIC_URL}/image/arrow-left-icon.png`}
-            alt="left"
-          />
+          <IoIosArrowBack className="arrowBtn" onClick={() => ArrowLeft()} />
         ) : (
           <img
             src={`${process.env.PUBLIC_URL}/image/transparent-icon.png`}
@@ -36,12 +33,9 @@ export default function PostPhotoSlider({ user, photoURLs }) {
         )}
 
         {countImg !== photoURLs.length - 1 ? (
-          <img
+          <IoIosArrowForward
             className="arrowBtn"
-            name="arrowRight"
-            onClick={ArrowRight}
-            src={`${process.env.PUBLIC_URL}/image/arrow-right-icon.png`}
-            alt="left"
+            onClick={() => ArrowRight()}
           />
         ) : (
           <img

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mainColor, LinkStyle, grayColor, grayLine } from '../../CommonStyled';
+import { mainColor, grayColor, grayLine } from '../../CommonStyled';
 
 export const InnerWidth = '480px';
 export const PostWrap = styled.div`
@@ -27,7 +27,6 @@ export const SliderWrap = styled.div`
     display: inline-block;
     height: 640px;
     border-radius: 10px;
-    /* border: 1px solid rgb(234, 234, 234); */
   }
 
   @media (max-width: 500px) {
@@ -51,11 +50,9 @@ export const SliderArrowWrap = styled.div`
   display: flex;
   justify-content: space-between;
 
-  img {
-    width: 25px;
-    height: 25px;
+  .arrowBtn {
     &:hover {
-      cursor: ${(props) => (props.onClick ? 'pointer' : '')};
+      cursor: pointer;
     }
   }
 
@@ -101,13 +98,11 @@ export const UserInfoWrap = styled.div`
 export const PlaceInfoWrap = styled.div`
   width: 480px;
   margin: 10px auto 0;
-  /* border: 1px solid blueviolet; */
   padding: 5px;
   box-sizing: border-box;
   border-bottom: ${grayLine};
 
   @media (max-width: 500px) {
-    /* width: 80%; */
     width: 85%;
     margin: 0 auto;
   }
@@ -115,7 +110,6 @@ export const PlaceInfoWrap = styled.div`
 export const PlaceInfo = styled.div`
   width: 100%;
   height: 100%;
-  /* padding: 10px; */
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -266,7 +260,6 @@ export const PlaceLocationWrap = styled.div`
     width: 90%;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     justify-content: start;
   }
   .locationIcon {
@@ -275,7 +268,6 @@ export const PlaceLocationWrap = styled.div`
   .placeAddr {
     text-align: left;
     font-size: 0.9rem;
-    /* margin-left: 2px; */
     margin: 2px 0 0 2px;
     line-height: 1rem;
   }
@@ -294,8 +286,6 @@ export const PlaceLocationWrap = styled.div`
 export const Modi_DelMenuWrap = styled.div`
   width: auto;
   position: relative;
-  /* background-color: pink; */
-
   .menuBtn {
     &:hover {
       cursor: pointer;
