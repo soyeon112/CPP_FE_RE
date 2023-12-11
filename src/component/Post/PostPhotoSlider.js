@@ -1,52 +1,31 @@
 import React, { useState } from 'react';
 
-import { SliderWrap, SliderArrowWrap, UserInfoWrap } from './styled';
-import { IoIosArrowBack } from 'react-icons/io';
-import { IoIosArrowForward } from 'react-icons/io';
+import { SliderWrap, UserInfoWrap, ImageWrap } from './styled';
+import { FaUser } from 'react-icons/fa6';
+
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function PostPhotoSlider({ user, photoURLs }) {
-  const [countImg, setCountImg] = useState(0);
-
-  //이전 버튼(img)
-  const ArrowLeft = () => {
-    if (countImg !== 0) {
-      setCountImg(countImg - 1);
-    }
-  };
-  //다음 버튼(img)
-  const ArrowRight = () => {
-    if (countImg !== photoURLs.length - 1) {
-      setCountImg(countImg + 1);
-    }
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
   };
 
   return (
     <SliderWrap>
-      <SliderArrowWrap>
-        {countImg !== 0 ? (
-          <IoIosArrowBack className="arrowBtn" onClick={() => ArrowLeft()} />
-        ) : (
-          <img
-            src={`${process.env.PUBLIC_URL}/image/transparent-icon.png`}
-            alt="left"
-          />
-        )}
-
-        {countImg !== photoURLs.length - 1 ? (
-          <IoIosArrowForward
-            className="arrowBtn"
-            onClick={() => ArrowRight()}
-          />
-        ) : (
-          <img
-            src={`${process.env.PUBLIC_URL}/image/transparent-icon.png`}
-            alt="left"
-          />
-        )}
-      </SliderArrowWrap>
-
-      <img className="sliderImgs" src={photoURLs[countImg]} alt="공간이미지" />
-
+      <Slider {...settings}>
+        {Object.values(photoURLs).map((it) => (
+          <ImageWrap>
+            <img className="sliderImgs" src={it} alt="공간이미지" />
+          </ImageWrap>
+        ))}
+      </Slider>
       <UserInfo username={user.nickname} />
     </SliderWrap>
   );
@@ -56,12 +35,7 @@ export default function PostPhotoSlider({ user, photoURLs }) {
 function UserInfo({ username }) {
   return (
     <UserInfoWrap>
-      <img
-        src={`${process.env.PUBLIC_URL}/image/user-icon.png`}
-        width="20px"
-        height="20px"
-        alt="left"
-      />
+      <FaUser className="userIcon" />
       <p className="nickname">{username}</p>
     </UserInfoWrap>
   );

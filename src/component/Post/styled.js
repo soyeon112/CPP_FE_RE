@@ -52,57 +52,38 @@ export const ImageWrap = styled.div`
   @media (max-width: 500px) {
   }
 `;
-export const SliderArrowWrap = styled.div`
-  width: 550px;
-  position: absolute;
-  /* top: 300px; */
-  top: 50%;
-  left: 50px;
-  display: flex;
-  justify-content: space-between;
-
-  .arrowBtn {
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 820px) {
-  }
-  @media (max-width: 500px) {
-    width: 95%;
-    top: 50%;
-    left: 1%;
-    padding: 0 5px;
-  }
-`;
 
 export const UserInfoWrap = styled.div`
   position: absolute;
-  left: 15px;
-  bottom: 15px;
+  left: 7px;
+  bottom: 10px;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: auto; //130px
   height: 22px;
-  padding: 2px 40px; //2px 15px 0 15px
+  padding: 2px 30px; //2px 15px 0 15px
   border-radius: 30px;
   border: none;
   /* background-color: #f0f0f0; */
   background-color: rgba(240, 240, 240, 0.8);
-  img {
-    position: absolute;
-    left: 15px;
+  .userIcon {
+    /* position: absolute; */
+    /* bottom: 5px;
+    left: 15px; */
   }
   .nickname {
     font-size: 0.9rem;
-    margin: 4px 0 0 20px;
+    margin-left: 10px;
   }
   @media (max-width: 500px) {
     left: 22px;
     border-radius: 10px;
     bottom: 30px;
+    .userIcon,
+    .nickname {
+      font-size: 0.8rem;
+    }
   }
 `;
 
@@ -128,7 +109,7 @@ export const PlaceInfo = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 
 export const PlaceInfoInnerL = styled.div`
@@ -149,7 +130,6 @@ export const PlaceInfoInnerL = styled.div`
     font-size: 1.3rem;
     color: ${mainColor};
     margin-right: 5px;
-    border: 1px solid pink;
   }
   .infoIcon {
     width: 15px;
