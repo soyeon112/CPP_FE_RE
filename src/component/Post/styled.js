@@ -89,7 +89,8 @@ export const UserInfoWrap = styled.div`
   padding: 2px 40px; //2px 15px 0 15px
   border-radius: 30px;
   border: none;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
+  background-color: rgba(240, 240, 240, 0.8);
   img {
     position: absolute;
     left: 15px;
@@ -99,9 +100,9 @@ export const UserInfoWrap = styled.div`
     margin: 4px 0 0 20px;
   }
   @media (max-width: 500px) {
-    left: 30px;
+    left: 22px;
     border-radius: 10px;
-    bottom: 35px;
+    bottom: 30px;
   }
 `;
 
@@ -142,12 +143,13 @@ export const PlaceInfoInnerL = styled.div`
 
   .placeName {
     height: 100%;
-    max-width: 80%;
+    max-width: 85%;
     text-align: left;
     font-family: 'PreB';
     font-size: 1.3rem;
     color: ${mainColor};
     margin-right: 5px;
+    border: 1px solid pink;
   }
   .infoIcon {
     width: 15px;
@@ -261,8 +263,8 @@ export const InfoPopup = styled.div`
 //위치정보
 export const PlaceLocationWrap = styled.div`
   width: 100%;
-  height: 40px;
-  margin-top: 15px;
+  /* height: 40px; */
+  margin: 10px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
