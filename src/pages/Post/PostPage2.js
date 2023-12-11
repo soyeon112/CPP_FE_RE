@@ -4,7 +4,7 @@ import React, { useState, useLayoutEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { PostWrap, StarRateWrap } from '../../component/Post/styled';
 //1126 컴포넌트 분리
-import PostPhotoSlider from '../../component/Post/PostPhotoSlider';
+import PostPhotoSlider from '../../component/Post/2PostPhotoSlider';
 import PostCafeInfo from '../../component/Post/PostCafeInfo';
 import PostStarRate from '../../component/Post/PostStarRate';
 import PostTexts from '../../component/Post/PostTexts';

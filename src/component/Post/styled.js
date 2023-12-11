@@ -21,24 +21,35 @@ export const PostWrap = styled.div`
 // 이미지 슬라이더
 export const SliderWrap = styled.div`
   position: relative;
-  overflow: hidden;
-  width: 100%;
+  /* overflow: hidden; */
+  width: 480px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
   .sliderImgs {
+    width: 100%;
     display: inline-block;
     height: 640px;
     border-radius: 10px;
   }
 
   @media (max-width: 500px) {
-    width: 100%;
+    width: 90%;
     padding: 0 20px 25px;
     box-sizing: border-box;
     margin: 0 auto;
     .sliderImgs {
-      width: 90%;
-      height: auto;
-      object-fit: contain;
+      width: 100%;
+      height: 400px;
+      /* object-fit: contain; */
     }
+  }
+`;
+
+export const ImageWrap = styled.div`
+  width: 480px;
+  height: auto;
+  @media (max-width: 500px) {
   }
 `;
 export const SliderArrowWrap = styled.div`
@@ -70,7 +81,7 @@ export const SliderArrowWrap = styled.div`
 
 export const UserInfoWrap = styled.div`
   position: absolute;
-  left: 90px;
+  left: 15px;
   bottom: 15px;
   display: flex;
   width: auto; //130px
@@ -88,16 +99,16 @@ export const UserInfoWrap = styled.div`
     margin: 4px 0 0 20px;
   }
   @media (max-width: 500px) {
-    left: 10%; //40px
+    left: 30px;
     border-radius: 10px;
-    /* bottom:70px; */
+    bottom: 35px;
   }
 `;
 
 // 카페 정보 및 각종 버튼
 export const PlaceInfoWrap = styled.div`
   width: 480px;
-  margin: 10px auto 0;
+  margin: 25px auto 0;
   padding: 5px;
   box-sizing: border-box;
   border-bottom: ${grayLine};
