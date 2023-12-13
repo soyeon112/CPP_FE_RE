@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect } from 'react';
+import React, { useRef } from 'react';
 import { Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { MarkerIdAction } from '../../store/markerId';
@@ -7,14 +7,11 @@ import { GeoAction } from '../../store/geolocation';
 import KakaoMap from '../../component/Map/KakaoMap';
 import GetMyLocation from '../../component/Map/GetMyLocation';
 
-import SearchBar from '../../component/MainSearchBar/SearchBar';
 import {
   MapPageWrap,
-  InnerWrap,
   InnerWrapMap,
   InnerWrapList,
   MapInnerTop,
-  GetLocationBtn,
   MapLayer,
   InnerLayer,
   ThumbLink,
@@ -22,10 +19,9 @@ import {
   ItemInner,
   MapPlaceName,
 } from './styled';
-import { mainColor, LinkStyle } from '../../CommonStyled';
+import { mainColor } from '../../CommonStyled';
 
 import dummy from '../../storeDummy.json';
-import { Link } from 'react-router-dom';
 
 //page - 카카오지도 페이지 ( 현재 위치 별 카페 보기 페이지 )
 function MapPage() {
@@ -38,8 +34,9 @@ function MapPage() {
 
   //선택된 카페 id 리덕스 저장
   const dispatch = useDispatch();
-  const selectListHandler = (id) => {
+  const selectListHandler = (id, lat, lng) => {
     dispatch(MarkerIdAction.selected(id));
+    dispatch(GeoAction.getGeo({ lat, lng }));
   };
 
   // -- 더미 데이터에서 '위경도, 이름, 주소, 썸네일'만 추출해서 배열로 저장
@@ -61,7 +58,6 @@ function MapPage() {
 
   return (
     <Fragment>
-      {/* <SearchBar /> */}
       <MapPageWrap>
         <InnerWrapMap>
           <MapInnerTop className="mapTitleWrap">
@@ -72,7 +68,7 @@ function MapPage() {
             <KakaoMap
               currentLat={reduxLat}
               currentLng={reduxLng}
-              markerLocation={markerArr}
+              markerArr={markerArr}
               mapRef={mapRef}
             />
           ) : (
@@ -115,7 +111,9 @@ function MapPage() {
                   //주소 '건물번호' 기준으로 자름
                   let addr = it.address.split(' ', 5);
                   return (
-                    <ListItem onClick={() => selectListHandler(it.id)}>
+                    <ListItem
+                      onClick={() => selectListHandler(it.id, it.lat, it.lng)}
+                    >
                       <ThumbLink to={`/post/${it.id}`} url={it.thumb}>
                         <ItemInner className="mapPlaceImg" url={it.thumb} />
                       </ThumbLink>

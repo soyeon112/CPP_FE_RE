@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
 
 import '../../pages/Map/styled';
@@ -6,7 +6,7 @@ import '../../pages/Map/styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { MarkerIdAction } from '../../store/markerId';
 
-function KakaoMap({ currentLat, currentLng, markerLocation, mapRef }) {
+function KakaoMap({ currentLat, currentLng, markerArr, mapRef }) {
   //클릭된 마커 저장(카페id)
   const dispatch = useDispatch();
   const markerIdSaveHandler = (id) => {
@@ -33,7 +33,7 @@ function KakaoMap({ currentLat, currentLng, markerLocation, mapRef }) {
         level={5} // 지도의 확대 레벨
         ref={mapRef}
       >
-        {markerLocation.map((it, key) => {
+        {markerArr.map((it, key) => {
           if (reduxMarker === it.id) {
             markerUrl = 'marker_color';
           } else {
