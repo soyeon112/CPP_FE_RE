@@ -1,13 +1,15 @@
 ### cafe place pick 프로젝트 리팩토링
 
-<p> 기간 : 23.11.19 - </p> 
+<p> 기간 : 23.11 - </p> 
 <p> - 컴포넌트 분리 및 폴더 구조 수정 </p>
-<p> - 메인 페이지, 게시물 조회 페이지, 현재 위치 별 카페 조회 페이지 기능 구현 </p>
+<p> - 페이지 기능 구현 : 메인 페이지, 게시물 조회 페이지, 현재 위치 별 카페 조회 페이지
 <p> - 더미데이터 생성 및 이용 </p>
+
+[🔗 페이지 이동](https://soyeon112.github.io/)
 
 ---
 
-![readmore_cpp](https://github.com/soyeon112/CPP-FE/assets/29302463/5faf108a-5277-4234-9a70-97a9d191d20f)
+![cpp_re_web_main](https://github.com/soyeon112/CPP-FE/assets/29302463/dcfd2fdf-2f07-46a8-904f-3855c6bb001d)
 
 감각적인 카페를 찾고 계신가요? :p
 
@@ -27,47 +29,11 @@
 
 ---
 
+### [📝 Github 팀 저장소](https://github.com/soyeon112/CPP-FE)
+
 ### [📝 Notion](https://shard-riverbed-e01.notion.site/C-P-P-cca45e2972f545c1b847190b35b260cd)
 
 ---
 
-| ![readmore_cpp_main](https://github.com/soyeon112/CPP-FE/assets/29302463/954377dd-f040-46da-aed6-9148372b9f0a) | ![readmore_cpp4](https://github.com/soyeon112/CPP-FE/assets/29302463/40cd2628-f17a-45bd-9ed6-b84562937926) |
-| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-
-| ![readmore_cpp_post](https://github.com/soyeon112/CPP-FE/assets/29302463/1d31e785-97cb-4566-9300-9861618c90b3) | ![readmore_cpp3](https://github.com/soyeon112/CPP-FE/assets/29302463/0b3205bf-c50c-4598-b929-9fb498581b84) |
-| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-
-| ![readmore_cpp4-1](https://github.com/soyeon112/CPP-FE/assets/29302463/a31c96a4-998f-49e9-a201-9636b4c85256) | ![readmore_cpp6](https://github.com/soyeon112/CPP-FE/assets/29302463/688db49a-dfe6-458a-a5f4-32dbd5012c02) |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-
----
-
-### 구현준
-
-- Role : Team Crew
-- Position : Full Stack
-- Github : 🔗[anonymous777777777](https://github.com/anonymous777777777)
-- Email : ✉️ hyunjoon69916991@gmail.com
-
-### 김소연 (PM)
-
-- Role : Team Leader
-- Position : Front-end
-- Github : 🔗 [soyeon112](https://github.com/soyeon112)
-- Email : ✉️ kimsoyeon1112@gmail.com
-
-### 김익수
-
-- Role : Team Crew
-- Position : Back-end
-- Github : 🔗 [gimmicks-u](https://github.com/gimmicks-u)
-- Email : ✉️ iksukis8604@gmail.com
-
-### 류승연
-
-- Role : Team Crew
-- Position : Front-end
-- Github : 🔗 [ryuttung](https://github.com/ryuttung)
-- Email : ✉️ seung43422@gmail.com
-
----
+| ![cpp_mockup_map](https://github.com/soyeon112/CPP-FE/assets/29302463/8c9d36d1-0369-4f1f-b261-6963dcbad4c0) | ![cpp_mockup_mobile](https://github.com/soyeon112/CPP-FE/assets/29302463/04045ee6-9a90-4163-b219-b22f1fafadc4) |
+| ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
