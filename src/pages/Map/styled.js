@@ -91,7 +91,7 @@ export const InnerWrap = styled.div`
   @media (max-width: 820px) {
     #listWrap {
       width: 100%;
-      height: auto;
+      /* height: auto; */
       border: none;
     }
   }
@@ -106,7 +106,7 @@ export const InnerWrapMap = styled(InnerWrap)`
   width: 50%;
   position: relative;
   @media (max-width: 820px) {
-    width: 70%;
+    width: 60%;
   }
   @media (max-width: 500px) {
     width: 100%;
@@ -116,7 +116,7 @@ export const InnerWrapMap = styled(InnerWrap)`
 export const InnerWrapList = styled(InnerWrap)`
   width: 50%;
   @media (max-width: 820px) {
-    width: 30%;
+    width: 40%;
   }
   @media (max-width: 500px) {
     width: 100%;
