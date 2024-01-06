@@ -13,13 +13,23 @@ import {
 import { FaCircleInfo } from 'react-icons/fa6';
 import { GrView } from 'react-icons/gr';
 import { LuReceipt } from 'react-icons/lu';
+import { IoReceiptOutline } from 'react-icons/io5';
+import { IoReceiptSharp } from 'react-icons/io5';
+import { FaRegHeart } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
+import { BsBookmarkStar } from 'react-icons/bs';
 import { BsBookmarkStarFill } from 'react-icons/bs';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { IoIosClose } from 'react-icons/io';
 import { CiMenuKebab } from 'react-icons/ci';
 
-export default function PostCafeInfo({ cafe, views }) {
+export default function PostCafeInfo({
+  cafe,
+  views,
+  isSponsored,
+  isLiked,
+  isBookmarked,
+}) {
   return (
     <PlaceInfoWrap>
       <PlaceInfo>
@@ -38,11 +48,25 @@ export default function PostCafeInfo({ cafe, views }) {
             <p className="viewCount">{views}</p>
           </div>
           {/* 영수증 */}
-          <LuReceipt className="receiptIcon" />
+          {isSponsored ? (
+            <IoReceiptSharp className="IconItem" />
+          ) : (
+            <IoReceiptOutline className="IconItem" />
+          )}
+          {/* <LuReceipt className="receiptIcon" /> */}
           {/* 좋아요 */}
-          <FaHeart className="likeIcon" />
+          {isLiked ? (
+            <FaHeart className="IconItem" />
+          ) : (
+            <FaRegHeart className="IconItem" />
+          )}
+
           {/* 북마크 */}
-          <BsBookmarkStarFill className="bookmarkIcon" />
+          {isBookmarked ? (
+            <BsBookmarkStarFill className="IconItem" />
+          ) : (
+            <BsBookmarkStar className="IconItem" />
+          )}
         </PlaceInfoInnerR>
       </PlaceInfo>
 
@@ -86,7 +110,7 @@ function InfoHover(props) {
   );
 }
 
-//메뉴버튼
+//메뉴버튼(수정/삭제)
 function MenuIcon() {
   const [isMenu, setIsMenu] = useState(false);
 

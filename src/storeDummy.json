@@ -6,8 +6,8 @@
     "visited": "2022-10-14",
     "receiptURL": "asdasdqwaqwsd",
     "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isLiked": true,
+    "isBookmarked": true,
 
     "rate": {
       "taste": 5,
@@ -44,8 +44,8 @@
     "visited": "2023-11-25",
     "receiptURL": "asdasdqwaqwsd",
     "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isLiked": false,
+    "isBookmarked": true,
 
     "rate": {
       "taste": 3,
@@ -85,9 +85,9 @@
     "views": 10501,
     "visited": "2022-08-20",
     "receiptURL": "asdasdqwaqwsd",
-    "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isSponsored": true,
+    "isLiked": false,
+    "isBookmarked": false,
 
     "rate": {
       "taste": 5,
@@ -124,8 +124,8 @@
     "visited": "2022-08-21",
     "receiptURL": "asdasdqwaqwsd",
     "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isLiked": false,
+    "isBookmarked": true,
 
     "rate": {
       "taste": 4,
@@ -161,8 +161,8 @@
     "visited": "2021-12-13",
     "receiptURL": "asdasdqwaqwsd",
     "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isLiked": false,
+    "isBookmarked": true,
 
     "rate": {
       "taste": 4,
@@ -197,8 +197,8 @@
     "visited": "2021-12-13",
     "receiptURL": "asdasdqwaqwsd",
     "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isLiked": false,
+    "isBookmarked": true,
 
     "rate": {
       "taste": 4,
@@ -234,8 +234,8 @@
     "visited": "2021-12-13",
     "receiptURL": "asdasdqwaqwsd",
     "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isLiked": false,
+    "isBookmarked": true,
 
     "rate": {
       "taste": 4,
@@ -270,8 +270,8 @@
     "visited": "2021-12-13",
     "receiptURL": "asdasdqwaqwsd",
     "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isLiked": false,
+    "isBookmarked": true,
 
     "rate": {
       "taste": 4,
@@ -308,8 +308,8 @@
     "visited": "2021-12-13",
     "receiptURL": "asdasdqwaqwsd",
     "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isLiked": false,
+    "isBookmarked": true,
 
     "rate": {
       "taste": 4,
@@ -345,8 +345,8 @@
     "visited": "2021-12-13",
     "receiptURL": "asdasdqwaqwsd",
     "isSponsored": false,
-    "isLikded": false,
-    "isStored": true,
+    "isLiked": false,
+    "isBookmarked": true,
 
     "rate": {
       "taste": 4,

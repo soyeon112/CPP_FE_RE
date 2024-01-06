@@ -8,6 +8,7 @@ export const MainWrap = styled.div`
 `;
 
 export const BannerWrap = styled.div`
+  position: relative;
   width: 100%;
   height: auto;
   margin: 10px auto;
@@ -37,24 +38,26 @@ export const BannerWrap = styled.div`
 `;
 
 export const MapButton = styled.button`
-  width: 200px;
-  /* width: 100%; */
-  height: 55px;
-  /* height: 100%; */
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* width: 200px; */
+  /* height: 55px; */
   padding: 20px;
   box-sizing: border-box;
-  margin: 20px auto;
   background-color: ${mainColor};
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border: none;
   transition: all 0.5s;
   font-family: 'PreB';
-  border-radius: 10px;
-  line-height: 15px;
+  border-radius: 150px;
+  line-height: 0px;
   &:hover {
-    box-shadow: 0 0.5em 0.5em -0.4em lightgray;
-    transform: translateY(-5px);
+    box-shadow: 0 0 0 1px transparent, 0 0 0 4px transparent,
+      0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px) translateX(-50%);
     cursor: pointer;
   }
 
@@ -63,11 +66,9 @@ export const MapButton = styled.button`
   @media (max-width: 820px) {
   }
   @media (max-width: 500px) {
-    width: 100%;
-    height: 50px;
-    font-size: 0.8rem;
-    line-height: 10px;
-    border-radius: 100px;
+    /* width: 100%;
+    height: 50px; */
+    /* font-size: 0.8rem; */
   }
 `;
 

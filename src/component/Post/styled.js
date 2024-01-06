@@ -160,9 +160,7 @@ export const PlaceInfoInnerR = styled.div`
     height: 30px;
   }
 
-  .receiptIcon,
-  .likeIcon,
-  .bookmarkIcon {
+  .IconItem {
     width: 30px;
     font-size: 1.4rem;
     &:hover {
@@ -182,9 +180,7 @@ export const PlaceInfoInnerR = styled.div`
       }
     }
 
-    .receiptIcon,
-    .likeIcon,
-    .bookmarkIcon {
+    .IconItem {
       font-size: 1rem;
     }
 
