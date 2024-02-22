@@ -370,8 +370,8 @@
       "/image/suwon_cafe3-5.jpg"
     ],
     "user": {
-      "id": 3,
-      "nickname": "쥬쥬",
+      "id": 7,
+      "nickname": "또욘",
       "profileURL": "/image/soProfile.jpg"
     },
     "location": { "lat": 37.2879012, "lng": 127.0150539 }
@@ -408,9 +408,9 @@
       "/image/heerangpirang5.jpg"
     ],
     "user": {
-      "id": 7,
-      "nickname": "또욘",
-      "profileURL": "/image/soProfile.jpg"
+      "id": 3,
+      "nickname": "쥬쥬",
+      "profileURL": "/image/juProfile.jpg"
     },
     "location": { "lat": 37.2668087, "lng": 127.0328628 }
   },
@@ -448,7 +448,7 @@
     "user": {
       "id": 3,
       "nickname": "쥬쥬",
-      "profileURL": "/image/soProfile.jpg"
+      "profileURL": "/image/juProfile.jpg"
     },
     "location": { "lat": 37.2169055, "lng": 127.0550669 }
   },
@@ -484,8 +484,8 @@
     "user": {
       "id": 3,
       "nickname": "쥬쥬",
-      "profileURL": "/image/soProfile.jpg"
+      "profileURL": "/image/juProfile.jpg"
     },
-    "location": { "lat": 37.2668087, "lng": 127.0328628 }
+    "location": { "lat": 37.3576099, "lng": 127.0530874 }
   }
 ]
