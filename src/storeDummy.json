@@ -370,10 +370,122 @@
       "/image/suwon_cafe3-5.jpg"
     ],
     "user": {
+      "id": 3,
+      "nickname": "쥬쥬",
+      "profileURL": "/image/soProfile.jpg"
+    },
+    "location": { "lat": 37.2879012, "lng": 127.0150539 }
+  },
+  {
+    "id": 11,
+    "content": "인계동에 위치해 있어 접근성이 좋아요! 채광 좋아서 날씨 좋은날 방문하길 추천합니다🫶🏻 \n맛있는 커피와 케이크는 말해뭐해~ 짱짱 존맛탱 ㅜ.ㅜ \n내부도 깔끔하고 아기자기 너무 귀여워요! ",
+    "views": 2505,
+    "visited": "2023-06-13",
+    "receiptURL": "asdasdqwaqwsd",
+    "isSponsored": false,
+    "isLiked": false,
+    "isBookmarked": true,
+
+    "rate": {
+      "taste": 4,
+      "vibe": 4,
+      "service": 3,
+      "parking": 0,
+      "bathroom": 2,
+      "amenity": 2
+    },
+    "cafe": {
+      "name": "히랑피랑",
+      "address": "경기 수원시 팔달구 인계로 140 시안프라자 2층 201-2호",
+      "phone": "0507-1375-8075",
+      "openingHours": "12:00 - 21:00 / 20:30 라스트오더 (매주 월요일 정기휴무)"
+    },
+    "photoURLs": [
+      "/image/heerangpirang1.jpg",
+      "/image/heerangpirang2.jpg",
+      "/image/heerangpirang3.jpg",
+      "/image/heerangpirang4.jpg",
+      "/image/heerangpirang5.jpg"
+    ],
+    "user": {
       "id": 7,
       "nickname": "또욘",
       "profileURL": "/image/soProfile.jpg"
     },
-    "location": { "lat": 37.2879012, "lng": 127.0150539 }
+    "location": { "lat": 37.2668087, "lng": 127.0328628 }
+  },
+  {
+    "id": 12,
+    "content": "귀여운 눈동자..👀 쏘큣..💖❤️‍🔥 \n귀엽기도 하지만 커피가 존맛탱\n언제와도 좋은 공간이에요! \n근처에 살았다면 단골 카페가 되었을지도!🥰",
+    "views": 2505,
+    "visited": "2023-06-13",
+    "receiptURL": "asdasdqwaqwsd",
+    "isSponsored": false,
+    "isLiked": false,
+    "isBookmarked": true,
+
+    "rate": {
+      "taste": 4,
+      "vibe": 4,
+      "service": 3,
+      "parking": 0,
+      "bathroom": 2,
+      "amenity": 2
+    },
+    "cafe": {
+      "name": "오르르(orr)",
+      "address": "경기도 화성시 기산동 37-2 KR 오르르(orr)",
+      "phone": "0507-1318-5203",
+      "openingHours": "12:00 - 21:00 (매주 월요일 정기휴무)"
+    },
+    "photoURLs": [
+      "/image/orr1.jpg",
+      "/image/orr2.jpg",
+      "/image/orr3.jpg",
+      "/image/orr4.jpg",
+      "/image/orr5.jpg"
+    ],
+    "user": {
+      "id": 3,
+      "nickname": "쥬쥬",
+      "profileURL": "/image/soProfile.jpg"
+    },
+    "location": { "lat": 37.2169055, "lng": 127.0550669 }
+  },
+  {
+    "id": 13,
+    "content": "반려동물 동반 가능🐶💗 브런치 카페 \n기대했던대로 분위기 넘 좋고, 음식들도 맛있었어요! \n특히 라쟈냐.. 존맛탱!!👍🏻💖 다음에는 디저트류 먹어보고 싶어요\n통창으로 들어오는 햇살이 따스했어요!\n날씨좋은날 방문 추천해요!",
+    "views": 2505,
+    "visited": "2023-06-13",
+    "receiptURL": "asdasdqwaqwsd",
+    "isSponsored": false,
+    "isLiked": false,
+    "isBookmarked": true,
+
+    "rate": {
+      "taste": 4,
+      "vibe": 4,
+      "service": 3,
+      "parking": 0,
+      "bathroom": 2,
+      "amenity": 2
+    },
+    "cafe": {
+      "name": "코울러",
+      "address": "경기 용인시 수지구 샘말로 2",
+      "phone": "0507-1321-1569",
+      "openingHours": "평일 10:00 - 19:00 / 주말 10:00 - 20:00"
+    },
+    "photoURLs": [
+      "/image/couler1.jpg",
+      "/image/couler2.jpg",
+      "/image/couler3.jpg"
+    ],
+    "user": {
+      "id": 3,
+      "nickname": "쥬쥬",
+      "profileURL": "/image/soProfile.jpg"
+    },
+    "location": { "lat": 37.2668087, "lng": 127.0328628 }
   }
 ]
